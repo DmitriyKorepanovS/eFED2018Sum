@@ -1,0 +1,292 @@
+body {
+    background-color: lightblue;
+}
+footer {
+    background-color: grey;
+    width: 600px;
+}
+.container{
+	position: relative;
+	float: left;
+	width: 600px;
+	height: 530px;
+}
+nav{
+	background-color: silver;
+	height: 30px;
+	width: 600px;
+}
+li{
+	display: inline-block;
+	border: 1px solid;
+	background-color: white;
+	padding: 3px;
+}
+ul {
+  list-style: none;
+}
+a {
+	text-decoration: none;
+	color:black;
+}
+.topblock {
+	position: relative;
+	float: left;
+	height: 50px;
+	width: 600px;
+	background-color: lightgray;
+	border-bottom: 1px solid;
+	border-color: black; 
+}
+.topblock-pollution{position: relative;
+	float: left;
+	height: 21px;
+	margin-left: 40px;
+}
+.topblock-findform{position: relative;
+	float: right;
+	height: 21px;
+	right: 20px;
+	top: 14px;
+}
+
+.content{
+	height:530px;
+}
+.content-leftcolumn {
+	position: relative;
+	float: left;
+	background-color: pink;
+	width: 300px;
+	height: 207px;
+}
+.content-rightcolumn {
+	position: relative;
+	float: right;
+	background-color: red;
+	width: 300px;
+	height: 207px;
+}
+.content-rightcolumn-buttonrow{
+	position: relative;
+	float: right;
+	width: 300px;
+}
+.buttonrow-button{
+	position: relative;
+	float: left;
+	background: white; 
+	border: 1px solid;
+	margin: 5px;
+	height: 50px;
+}
+.content-levelrow{
+	position: relative;
+	float: left;
+	height: 100px;
+	width: 600px;
+}
+.levelrow-box{
+	position: relative;
+	float: left;
+	background: blue; 
+	width: 25px;
+	height: 100px;
+}
+.content-timerow{
+	position: relative;
+	float: left;
+}
+.timerow-time{
+ position: relative;
+	float: left;
+	width: 55px;
+	padding: 10px;
+	background: white;
+}
+.content-picturrow{
+	position: relative;
+	float: left;
+	height: 134px;
+}	
+.picturrow-box{
+	position: relative;
+	float: left;
+	width: 75px;
+	background: yellow;
+	text-align: center;
+}
+.ptext{
+	text-align: center;
+}
+span {
+	font-size: 20px;
+}
+.topblock-city {
+	position: relative;
+	float: left;
+	background-color: lightgray;
+	margin-left: 40px;
+	
+}
+td {
+	font-size: 13px;
+	text-align: center;
+}
+.containerhystory{
+	position: relative;
+	float: left;
+	width: 600px;
+	height: 530px;
+	background-color: white;
+}
+.weathertable {
+	position: relative;
+	float: left;
+	width: 510px;
+	height: 200px;
+	left: 45px;
+	top: 15px;
+	background-color: pink; 
+}
+.weathertable-dayrow{
+	position: relative;
+	float: left;
+	width: 510px;
+	height: 23px;
+	
+}
+.weathertable-dayrow-box{
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 20px;
+	background-color: pink;
+	border: 1px solid;
+}
+.weathertable-weather{
+	position: relative;
+	float: left;
+	width: 510px;
+	height: 60px;
+	background-color: lightyellow;
+	top: -2px;
+}
+.weathertable-weather-box{
+	position: relative;
+	float: left;
+	background-color: white;
+	width: 100px;
+	height: 60px;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-top: 1px solid;
+}
+.weathertable-temperature{
+	position: relative;
+	float: left;
+	width: 510px;
+	height: 14px;
+	background-color: lightblue;
+}
+.weathertable-temperature-box{
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 15px;
+	background-color: lightgreen;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	top: -1px;
+}
+.weathertable-temperature-box-value{
+	position: relative;
+	float: left;
+	width: 15px;
+	height: 10px;
+	background-color: red;
+	border: 1px solid;
+	margin-right: 5px;
+}
+.weathertable-middleline{
+	position: relative;
+	float: left;
+	background-color: silver;
+	width: 508px;
+	height: 25px;
+	border: 1px solid;
+	top:-1px;
+	text-align: center;
+}
+.weathertable-middleline-2{
+	position: relative;
+	float: left;
+	background-color: silver;
+	width: 508px;
+	height: 25px;
+	border: 1px solid;
+	top:20px;
+	text-align: center;
+}
+.weathertable-water{
+position: relative;
+	float: left;
+	width: 510px;
+	height: 14px;
+	background-color: lightblue;
+}
+.middlebox{
+	position: relative;
+	float: left;
+	width: 510px;
+	height: 30px;
+	background-color: silver;
+	left: 45px;
+	margin-top: 50px;
+}
+.bottomblock{
+	position: relative;
+	float: left;
+	width: 510px;
+	height: 180px;
+	background-color: lightyellow;
+	left: 45px;
+	
+}
+.bottomblock-leftcolumn{
+	position: relative;
+	float: left;
+	width: 255px;
+	height: 180px;
+}
+.bottomblock-rightcolumn{
+	position: relative;
+	float: right;
+	width: 255px;
+	height: 180px;
+	background-color: lightblue;
+}
+.bottomblock-rightcolumn-image{
+	position: relative;
+	float: left;
+	background-color: white;
+	width: 100px;
+	height: 180px;
+}
+.bottomblock-rightcolumn-text{
+	position: relative;
+	float: left;
+	background-color: lightblue;
+	width: 155px;
+	height: 180px;
+}
+.bottomblock-leftcolumn-text{
+	position: relative;
+	float: left;
+	background-color: lightblue;
+	width: 155px;
+	height: 180px;
+}
+.weathertable-temperature-box-value-smalltext{
+	font-size: 14px;
+}
