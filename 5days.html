@@ -6,18 +6,21 @@
  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+  <header>
    <nav><ul>
    <li><a href="index.html">Сегодня</a></li> 
    <li><a href="5days.html">5 дней</a></li>
    <li><a href="hystory.html">История погоды</a></li>
    </ul>
   </nav>
+  <div class = "topblock">
+      <p class="topblock-city">34&degC Ижевск, Россия</p>
+     <form class="topblock-findform">
+       <input type="search" name="q" placeholder="Поиск"> </form>
+     </div >
+</header>
+<main>
  <div class ="containerhystory">
-   <div class = "topblock">
-   <p class="topblock-city">34&degC Ижевск, Россия</p>
-  <form class="topblock-findform">
-    <input type="search" name="q" placeholder="Поиск"> </form>
-  </div >
    <div class="weathertable">
     <div class ="weathertable-dayrow">
       <div class ="weathertable-dayrow-box"> <span>Пт, 18 мая</span></div>
@@ -294,6 +297,22 @@
       </div>
    </div>
  </div>
-    <footer><p class="ptext">2018 &copy copyright</p></footer>
+ <section>
+    <article>
+      <div class= "news">Новости сайта
+          <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>
+          <input type="date" min="2018-01-01" value="2018-07-11"/>
+      </div> 
+    </article>
+  </section>
+</main>
+<aside>
+    <div class="advertising"><span>Рекламный блок <br/></span>
+        <audio src="music.mp3" controls autoplay>
+              Your browser does not support the <audio> element.
+           </audio>    
+    </div>
+  </aside>
+    <footer><span class="footertext">2018 &copy copyright</span></footer>
 </body>
 </html>
