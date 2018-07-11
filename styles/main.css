@@ -1,51 +1,57 @@
-
 footer {
 	background-color: silver;
-    width: 600px;
+	width: 600px;
 }
 
-nav{
+nav {
 	background-color: silver;
 	height: 30px;
 	width: 600px;
 }
-li{
+
+li {
 	display: inline-block;
 	border: 1px solid;
 	background-color: white;
-	padding: 3px;	
+	padding: 3px;
 }
+
 ul {
-  list-style: none;
+	list-style: none;
 }
+
 a {
 	text-decoration: none;
-	color:black;
+	color: black;
 }
+
 .topblock {
 	height: 50px;
 	width: 600px;
 	background-color: lightgray;
 	border-bottom: 1px solid;
-	border-color: black; 
+	border-color: black;
 }
-.topblock-pollution{
-	display:inline-block;
+
+.topblock-pollution {
+	display: inline-block;
 	height: 21px;
 	padding-left: 40px;
 	width: 200px;
 }
-.topblock-findform{
-	display:inline-block;
+
+.topblock-findform {
+	display: inline-block;
 	height: 21px;
 	right: 20px;
 	padding-left: 140px;
 }
 
-.content{
-	height:481px;
+.content {
+	height: 481px;
 	width: 600px;
 }
+
 .content-leftcolumn {
 	position: relative;
 	float: left;
@@ -53,6 +59,7 @@ a {
 	width: 300px;
 	height: 207px;
 }
+
 .content-rightcolumn {
 	position: relative;
 	float: right;
@@ -60,79 +67,91 @@ a {
 	width: 300px;
 	height: 207px;
 }
-.content-rightcolumn-buttonrow{
+
+.content-rightcolumn-buttonrow {
 	position: relative;
 	float: right;
 	width: 300px;
 }
-.buttonrow-button{
+
+.buttonrow-button {
 	position: relative;
 	float: left;
-	background: white; 
+	background: white;
 	border: 1px solid;
 	margin: 5px;
 	height: 50px;
 }
-.content-levelrow{
+
+.content-levelrow {
 	clear: both;
 	height: 102px;
 	width: 600px;
 	background: #e7f1fd;
 }
-.levelrow-box{
-	display:inline-block;
-	background: #e7f1fd; 
+
+.levelrow-box {
+	display: inline-block;
+	background: #e7f1fd;
 	width: 21px;
 	height: 100px;
 	border-top: 2px solid #1878f0;
-
 }
-.content-timerow{
+
+.content-timerow {
 	height: 38px;
 }
-.timerow-time{
- position: relative;
+
+.timerow-time {
+	position: relative;
 	float: left;
 	width: 55px;
 	padding: 10px;
 	background: white;
 }
-.content-picturrow{
+
+.content-picturrow {
 	background: white;
 	height: 134px;
-}	
-.picturrow-box{
+}
+
+.picturrow-box {
 	display: inline-block;
 	width: 71px;
 	background: white;
 	text-align: center;
-	
 }
-.footertext{
+
+.footertext {
 	padding-left: 240px
 }
-.textspace{
+
+.textspace {
 	margin-left: 100px;
 }
+
 span {
 	font-size: 18px;
 }
+
 .topblock-city {
 	display: inline-block;
 	background-color: lightgray;
 	margin-left: 40px;
 	width: 200px;
-	
 }
+
 td {
 	font-size: 13px;
 	text-align: center;
 }
-.containerhystory{
+
+.containerhystory {
 	width: 600px;
 	height: 481px;
 	background-color: white;
 }
+
 .weathertable {
 	position: relative;
 	float: left;
@@ -141,21 +160,23 @@ td {
 	left: 45px;
 	top: 15px;
 }
-.weathertable-dayrow{
+
+.weathertable-dayrow {
 	position: relative;
 	float: left;
 	width: 510px;
 	height: 23px;
-	
 }
-.weathertable-dayrow-box{
+
+.weathertable-dayrow-box {
 	position: relative;
 	float: left;
 	width: 100px;
 	height: 20px;
 	border: 1px solid;
 }
-.weathertable-weather{
+
+.weathertable-weather {
 	position: relative;
 	float: left;
 	width: 510px;
@@ -163,7 +184,8 @@ td {
 	background-color: lightyellow;
 	top: -2px;
 }
-.weathertable-weather-box{
+
+.weathertable-weather-box {
 	position: relative;
 	float: left;
 	background-color: white;
@@ -173,7 +195,8 @@ td {
 	border-right: 1px solid;
 	border-top: 1px solid;
 }
-.weathertable-weather-box-status{
+
+.weathertable-weather-box-status {
 	position: relative;
 	float: left;
 	width: 24px;
@@ -181,17 +204,20 @@ td {
 	background-color: rgb(255, 255, 255);
 	margin-right: 1px;
 }
-.weathertable-weather-box-status-smalltext{
+
+.weathertable-weather-box-status-smalltext {
 	font-size: 9px;
 }
-.weathertable-weather-temperature{
+
+.weathertable-weather-temperature {
 	position: relative;
 	float: left;
 	width: 510px;
 	height: 30px;
 	background-color: lightblue;
 }
-.weathertable-weather-temperature-box{
+
+.weathertable-weather-temperature-box {
 	position: relative;
 	float: left;
 	width: 100px;
@@ -201,7 +227,8 @@ td {
 	border-right: 1px solid;
 	top: -1px;
 }
-.weathertable-temperature-box-value{
+
+.weathertable-temperature-box-value {
 	position: relative;
 	float: left;
 	width: 18px;
@@ -210,35 +237,39 @@ td {
 	border: 1px solid;
 	margin-right: 5px;
 }
-.weathertable-middleline{
+
+.weathertable-middleline {
 	position: relative;
 	float: left;
 	background-color: silver;
 	width: 508px;
 	height: 25px;
 	border: 1px solid;
-	top:-1px;
+	top: -1px;
 	text-align: center;
 }
-.weathertable-middleline-row{
+
+.weathertable-middleline-row {
 	position: relative;
 	float: left;
 	width: 510px;
 	height: 25px;
-	top:5px;
+	top: 5px;
 	text-align: center;
 	left: -1px;
 }
-.weathertable-middleline-row-box{
+
+.weathertable-middleline-row-box {
 	position: relative;
 	float: left;
 	width: 100px;
 	height: 30px;
 	border-left: 1px solid;
 	border-bottom: 1px solid;
-	border-right: 1px solid; 
+	border-right: 1px solid;
 }
-.weathertable-middleline-row-box-value{
+
+.weathertable-middleline-row-box-value {
 	position: relative;
 	float: left;
 	width: 18px;
@@ -246,27 +277,30 @@ td {
 	background-color: gray;
 	border: 1px solid;
 	margin-right: 5px;
-	margin-top: 1px;	
+	margin-top: 1px;
 }
-.weathertable-middleline-2{
+
+.weathertable-middleline-2 {
 	position: relative;
 	float: left;
 	background-color: silver;
 	width: 508px;
 	height: 25px;
 	border: 1px solid;
-	top:20px;
+	top: 20px;
 	text-align: center;
 }
-.weathertable-rainfall{
+
+.weathertable-rainfall {
 	position: relative;
 	float: left;
 	width: 510px;
 	height: 61px;
 	background-color: lightyellow;
-	top: 20px;	
+	top: 20px;
 }
-.weathertable-rainfall-box{
+
+.weathertable-rainfall-box {
 	position: relative;
 	float: left;
 	width: 100px;
@@ -274,9 +308,10 @@ td {
 	border-left: 1px solid;
 	border-bottom: 1px solid;
 	border-right: 1px solid;
-	background-color: rgb(255, 255, 255);	
+	background-color: rgb(255, 255, 255);
 }
-.weathertable-rainfall-box-water{
+
+.weathertable-rainfall-box-water {
 	position: relative;
 	float: left;
 	width: 30px;
@@ -287,14 +322,15 @@ td {
 	padding-left: 2px;
 }
 
-.weathertable-water{
-position: relative;
+.weathertable-water {
+	position: relative;
 	float: left;
 	width: 510px;
 	height: 14px;
 	background-color: lightblue;
 }
-.middlebox{
+
+.middlebox {
 	position: relative;
 	float: left;
 	width: 510px;
@@ -303,71 +339,82 @@ position: relative;
 	left: 45px;
 	margin-top: 50px;
 }
-.bottomblock{
+
+.bottomblock {
 	position: relative;
 	float: left;
 	width: 510px;
 	height: 180px;
 	left: 45px;
-	
 }
-.bottomblock-leftcolumn{
+
+.bottomblock-leftcolumn {
 	position: relative;
 	float: left;
 	width: 255px;
 	height: 180px;
 }
-.bottomblock-leftcolumn-image{
+
+.bottomblock-leftcolumn-image {
 	position: relative;
 	float: left;
 	width: 100px;
 	height: 105px;
 }
-.bottomblock-rightcolumn{
+
+.bottomblock-rightcolumn {
 	position: relative;
 	float: right;
 	width: 255px;
 	height: 180px;
 }
-.bottomblock-rightcolumn-image{
+
+.bottomblock-rightcolumn-image {
 	position: relative;
 	float: left;
 	width: 100px;
 	height: 105px;
 }
-.bottomblock-rightcolumn-text{
+
+.bottomblock-rightcolumn-text {
 	position: relative;
 	float: left;
 	width: 155px;
 	height: 105px;
 }
-.bottomblock-leftcolumn-text{
+
+.bottomblock-leftcolumn-text {
 	position: relative;
 	float: left;
 	width: 155px;
 	height: 105px;
 }
-.bottomblock-leftcolumn-textblock{
+
+.bottomblock-leftcolumn-textblock {
 	position: relative;
 	float: left;
 	width: 255px;
 	height: 75px;
 }
-.bottomblock-rightcolumn-textblock{
+
+.bottomblock-rightcolumn-textblock {
 	position: relative;
 	float: left;
 	width: 255px;
 	height: 75px;
 }
-.weathertable-temperature-box-value-smalltext{
+
+.weathertable-temperature-box-value-smalltext {
 	font-size: 10px;
 }
-.news	{
+
+.news {
 	background-color: white;
 	width: 600px;
 	text-align: center;
 }
-.advertising{
+
+.advertising {
 	background-color: white;
 	width: 600px;
 	text-align: center;
