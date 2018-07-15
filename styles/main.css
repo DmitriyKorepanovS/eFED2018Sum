@@ -1,23 +1,41 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 600px;
+	font-family: 'Montserrat', sans-serif;
+}
+
 footer {
-	background-color: silver;
+	background-color: #d7d7d7;
 	width: 600px;
 }
 
+input {
+	border-radius: 5px;
+	background-color: #d8d8d8;
+}
+
 nav {
-	background-color: silver;
-	height: 30px;
+	background-color: #d8d8d8;
+	height: 37px;
 	width: 600px;
 }
 
 li {
 	display: inline-block;
-	border: 1px solid;
+	border: 1px solid rgba(0, 0, 0, 0.253);
 	background-color: white;
 	padding: 3px;
 }
 
+.liactivesite {
+	background-color: #9b9b9b;
+}
+
 ul {
 	list-style: none;
+	margin: 0;
+	padding-top: 5px;
 }
 
 a {
@@ -28,7 +46,7 @@ a {
 .topblock {
 	height: 50px;
 	width: 600px;
-	background-color: lightgray;
+	background-color: #f2f2f2;
 	border-bottom: 1px solid;
 	border-color: black;
 }
@@ -37,82 +55,130 @@ a {
 	display: inline-block;
 	height: 21px;
 	padding-left: 40px;
-	width: 200px;
+	width: 300px;
 }
 
 .topblock-findform {
 	display: inline-block;
 	height: 21px;
-	right: 20px;
-	padding-left: 140px;
+	padding-left: 50px;
 }
 
 .content {
-	height: 481px;
+	height: 510px;
 	width: 600px;
 }
 
 .content-leftcolumn {
-	position: relative;
 	float: left;
-	background-color: pink;
-	width: 300px;
-	height: 207px;
+	width: 240px;
+	height: 260px;
+	font-size: 22px;
+	padding-left: 40px;
 }
 
 .content-rightcolumn {
-	position: relative;
 	float: right;
-	background-color: red;
-	width: 300px;
-	height: 207px;
+	width: 320px;
+	height: 260px;
+	font-size: 22px;
 }
 
 .content-rightcolumn-buttonrow {
-	position: relative;
-	float: right;
-	width: 300px;
+	width: 320px;
+	height: 54px;
+	font-size: 14px;
 }
 
-.buttonrow-button {
-	position: relative;
+.buttonrow-button1 {
 	float: left;
-	background: white;
-	border: 1px solid;
-	margin: 5px;
-	height: 50px;
+	background-color: #9b9b9b;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin-right: 8px;
+	height: 42px;
+	padding: 5px;
+	text-align: center;
+}
+
+.buttonrow-button2 {
+	float: left;
+	background: #f5f5f5;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin-right: 8px;
+	height: 31px;
+	padding: 16px 8px 5px 5px;
+	text-align: center;
 }
 
 .content-levelrow {
 	clear: both;
-	height: 102px;
+	height: 52px;
 	width: 600px;
-	background: #e7f1fd;
+	color: blue;
+	background-color: #e7f1fd;
+	font-size: 12px;
+	text-align: center;
 }
 
-.levelrow-box {
-	display: inline-block;
-	background: #e7f1fd;
-	width: 21px;
-	height: 100px;
-	border-top: 2px solid #1878f0;
+.levelrow-emptywhitebox {
+	float: left;
+	width: 7px;
+	height: 52px;
+	background-color: white;
+}
+
+.levelrow-emptywhiteboxlast {
+	float: left;
+	width: 17px;
+	height: 52px;
+	background-color: white;
+}
+
+.levelrow-boxlow {
+	float: left;
+	width: 24px;
+	height: 30px;
+	border-bottom: 2px solid #1878f0;
+	background-color: white;
+}
+
+.levelrow-boxhigh {
+	float: left;
+	width: 24px;
+	height: 15px;
+	border-bottom: 2px solid #1878f0;
+	background-color: white;
+}
+
+.levelrow-boxhighmiddle {
+	float: left;
+	width: 24px;
+	height: 25px;
+	border-bottom: 2px solid #1878f0;
+	background-color: white;
 }
 
 .content-timerow {
+	clear: both;
 	height: 38px;
+	text-align: center;
 }
 
 .timerow-time {
-	position: relative;
 	float: left;
 	width: 55px;
 	padding: 10px;
 	background: white;
+	color: #9e9e9e;
 }
 
 .content-picturrow {
 	background: white;
-	height: 134px;
+	height: 156px;
+}
+
+.greytext {
+	color: #9e9e9e;
 }
 
 .picturrow-box {
@@ -120,6 +186,16 @@ a {
 	width: 71px;
 	background: white;
 	text-align: center;
+	height: 156px;
+}
+
+.picturrow-boxborder {
+	display: inline-block;
+	width: 71px;
+	background: #fcfcfc;
+	text-align: center;
+	border: 1px solid #e9e9e9;
+	height: 154px;
 }
 
 .footertext {
@@ -130,46 +206,26 @@ a {
 	margin-left: 100px;
 }
 
-span {
-	font-size: 18px;
-}
-
 .topblock-city {
 	display: inline-block;
-	background-color: lightgray;
 	margin-left: 40px;
-	width: 200px;
-}
-
-td {
-	font-size: 13px;
-	text-align: center;
-}
-
-.containerhystory {
-	width: 600px;
-	height: 481px;
-	background-color: white;
+	width: 300px;
 }
 
 .weathertable {
-	position: relative;
-	float: left;
 	width: 510px;
-	height: 200px;
-	left: 45px;
-	top: 15px;
+	height: 270px;
+	padding-left: 45px;
+	padding-top: 15px;
 }
 
 .weathertable-dayrow {
-	position: relative;
-	float: left;
 	width: 510px;
-	height: 23px;
+	height: 22px;
+	text-align: center;
 }
 
 .weathertable-dayrow-box {
-	position: relative;
 	float: left;
 	width: 100px;
 	height: 20px;
@@ -177,16 +233,12 @@ td {
 }
 
 .weathertable-weather {
-	position: relative;
-	float: left;
 	width: 510px;
 	height: 91px;
 	background-color: lightyellow;
-	top: -2px;
 }
 
 .weathertable-weather-box {
-	position: relative;
 	float: left;
 	background-color: white;
 	width: 100px;
@@ -197,7 +249,6 @@ td {
 }
 
 .weathertable-weather-box-status {
-	position: relative;
 	float: left;
 	width: 24px;
 	height: 50px;
@@ -206,61 +257,73 @@ td {
 }
 
 .weathertable-weather-box-status-smalltext {
-	font-size: 9px;
+	font-size: 8px;
 }
 
 .weathertable-weather-temperature {
-	position: relative;
-	float: left;
+	clear: both;
 	width: 510px;
 	height: 30px;
 	background-color: lightblue;
 }
 
 .weathertable-weather-temperature-box {
-	position: relative;
 	float: left;
 	width: 100px;
 	height: 30px;
 	background-color: rgb(255, 255, 255);
 	border-left: 1px solid;
 	border-right: 1px solid;
-	top: -1px;
 }
 
-.weathertable-temperature-box-value {
-	position: relative;
+.weathertable-temperature-box-yellow {
 	float: left;
 	width: 18px;
 	height: 15px;
-	background-color: rgb(0, 255, 55);
+	background-color: #f8e71c;
 	border: 1px solid;
 	margin-right: 5px;
+	font-size: 10px;
+}
+
+.weathertable-temperature-box-orange {
+	float: left;
+	width: 18px;
+	height: 15px;
+	background-color: #f5a623;
+	border: 1px solid;
+	margin-right: 5px;
+	font-size: 10px;
+}
+
+.weathertable-temperature-box-green {
+	float: left;
+	width: 18px;
+	height: 15px;
+	background-color: #b8ea86;
+	border: 1px solid;
+	margin-right: 4px;
+	margin-left: 1px;
+	font-size: 10px;
 }
 
 .weathertable-middleline {
-	position: relative;
-	float: left;
+	clear: both;
 	background-color: silver;
 	width: 508px;
 	height: 25px;
 	border: 1px solid;
-	top: -1px;
 	text-align: center;
 }
 
 .weathertable-middleline-row {
-	position: relative;
-	float: left;
+	clear: both;
 	width: 510px;
 	height: 25px;
-	top: 5px;
 	text-align: center;
-	left: -1px;
 }
 
 .weathertable-middleline-row-box {
-	position: relative;
 	float: left;
 	width: 100px;
 	height: 30px;
@@ -270,38 +333,32 @@ td {
 }
 
 .weathertable-middleline-row-box-value {
-	position: relative;
 	float: left;
 	width: 18px;
 	height: 15px;
-	background-color: gray;
-	border: 1px solid;
-	margin-right: 5px;
-	margin-top: 1px;
+	background-color: #d8d8d8;
+	margin-right: 4px;
+	margin-top: 6px;
+	transform: skew(-20deg);
+	margin-left: 3px;
 }
 
-.weathertable-middleline-2 {
-	position: relative;
-	float: left;
+.weathertable-rainfallline {
+	clear: both;
 	background-color: silver;
 	width: 508px;
 	height: 25px;
 	border: 1px solid;
-	top: 20px;
 	text-align: center;
 }
 
 .weathertable-rainfall {
-	position: relative;
-	float: left;
 	width: 510px;
 	height: 61px;
 	background-color: lightyellow;
-	top: 20px;
 }
 
 .weathertable-rainfall-box {
-	position: relative;
 	float: left;
 	width: 100px;
 	height: 60px;
@@ -312,18 +369,16 @@ td {
 }
 
 .weathertable-rainfall-box-water {
-	position: relative;
 	float: left;
-	width: 30px;
+	width: 23px;
 	height: 22px;
 	background-color: rgb(255, 255, 255);
-	top: 38px;
-	left: 1px;
 	padding-left: 2px;
+	padding-top: 38px;
+	text-align: center;
 }
 
 .weathertable-water {
-	position: relative;
 	float: left;
 	width: 510px;
 	height: 14px;
@@ -331,91 +386,85 @@ td {
 }
 
 .middlebox {
-	position: relative;
-	float: left;
+	clear: both;
 	width: 510px;
 	height: 30px;
 	background-color: silver;
-	left: 45px;
-	margin-top: 50px;
+	margin-left: 45px;
+	border: 1px solid;
 }
 
 .bottomblock {
-	position: relative;
 	float: left;
 	width: 510px;
 	height: 180px;
-	left: 45px;
+	margin-left: 45px;
+	margin-top: 10px;
 }
 
 .bottomblock-leftcolumn {
-	position: relative;
 	float: left;
 	width: 255px;
 	height: 180px;
 }
 
 .bottomblock-leftcolumn-image {
-	position: relative;
 	float: left;
 	width: 100px;
-	height: 105px;
+	height: 120px;
 }
 
 .bottomblock-rightcolumn {
-	position: relative;
 	float: right;
 	width: 255px;
 	height: 180px;
 }
 
 .bottomblock-rightcolumn-image {
-	position: relative;
 	float: left;
 	width: 100px;
-	height: 105px;
+	height: 120px;
 }
 
 .bottomblock-rightcolumn-text {
-	position: relative;
 	float: left;
 	width: 155px;
-	height: 105px;
+	height: 120px;
 }
 
 .bottomblock-leftcolumn-text {
-	position: relative;
 	float: left;
 	width: 155px;
-	height: 105px;
+	height: 120px;
 }
 
 .bottomblock-leftcolumn-textblock {
-	position: relative;
-	float: left;
+	clear: both;
 	width: 255px;
 	height: 75px;
 }
 
 .bottomblock-rightcolumn-textblock {
-	position: relative;
 	float: left;
 	width: 255px;
 	height: 75px;
 }
 
-.weathertable-temperature-box-value-smalltext {
+.table-text {
+	padding-top: 50px;
 	font-size: 10px;
-}
-
-.news {
-	background-color: white;
-	width: 600px;
 	text-align: center;
 }
 
-.advertising {
-	background-color: white;
-	width: 600px;
-	text-align: center;
+table .first-row td:nth-child(odd) {
+	background: silver;
+}
+
+table .second-row td:nth-child(even) {
+	background: silver;
+}
+
+td {
+	width: 65px;
+	height: 28px;
 }
