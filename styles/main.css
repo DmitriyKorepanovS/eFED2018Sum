@@ -1,13 +1,13 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	width: 600px;
+	width: 800px;
 	font-family: 'Montserrat', sans-serif;
 }
 
 footer {
 	background-color: #d7d7d7;
-	width: 600px;
+	width: 800px;
 }
 
 input {
@@ -18,7 +18,7 @@ input {
 nav {
 	background-color: #d8d8d8;
 	height: 37px;
-	width: 600px;
+	width: 800px;
 }
 
 li {
@@ -28,7 +28,7 @@ li {
 	padding: 3px;
 }
 
-.liactivesite {
+.li-activesite {
 	background-color: #9b9b9b;
 }
 
@@ -43,35 +43,40 @@ a {
 	color: black;
 }
 
-.topblock {
+.header-info {
 	height: 50px;
-	width: 600px;
+	width: 800px;
 	background-color: #f2f2f2;
 	border-bottom: 1px solid;
 	border-color: black;
 }
 
-.topblock-pollution {
+.header-info__pollution {
 	display: inline-block;
 	height: 21px;
 	padding-left: 40px;
 	width: 300px;
 }
 
-.topblock-findform {
+.header-findform {
 	display: inline-block;
 	height: 21px;
-	padding-left: 50px;
+	padding-left: 250px;
 }
 
 .content {
 	height: 510px;
-	width: 600px;
+	width: 800px;
+}
+
+.toprow {
+	width: 800px;
+	height: 260px;
 }
 
 .content-leftcolumn {
 	float: left;
-	width: 240px;
+	width: 360px;
 	height: 260px;
 	font-size: 22px;
 	padding-left: 40px;
@@ -79,7 +84,7 @@ a {
 
 .content-rightcolumn {
 	float: right;
-	width: 320px;
+	width: 400px;
 	height: 260px;
 	font-size: 22px;
 }
@@ -113,7 +118,7 @@ a {
 .content-levelrow {
 	clear: both;
 	height: 52px;
-	width: 600px;
+	width: 800px;
 	color: blue;
 	background-color: #e7f1fd;
 	font-size: 12px;
@@ -122,21 +127,21 @@ a {
 
 .levelrow-emptywhitebox {
 	float: left;
-	width: 7px;
+	width: 16px;
 	height: 52px;
 	background-color: white;
 }
 
 .levelrow-emptywhiteboxlast {
 	float: left;
-	width: 17px;
+	width: 16px;
 	height: 52px;
 	background-color: white;
 }
 
 .levelrow-boxlow {
 	float: left;
-	width: 24px;
+	width: 32px;
 	height: 30px;
 	border-bottom: 2px solid #1878f0;
 	background-color: white;
@@ -144,7 +149,7 @@ a {
 
 .levelrow-boxhigh {
 	float: left;
-	width: 24px;
+	width: 32px;
 	height: 15px;
 	border-bottom: 2px solid #1878f0;
 	background-color: white;
@@ -166,7 +171,7 @@ a {
 
 .timerow-time {
 	float: left;
-	width: 55px;
+	width: 80px;
 	padding: 10px;
 	background: white;
 	color: #9e9e9e;
@@ -175,6 +180,8 @@ a {
 .content-picturrow {
 	background: white;
 	height: 156px;
+	clear: both;
+	margin-left: 10px;
 }
 
 .greytext {
@@ -182,16 +189,17 @@ a {
 }
 
 .picturrow-box {
-	display: inline-block;
-	width: 71px;
+	float: left;
+	width: 96px;
 	background: white;
 	text-align: center;
 	height: 156px;
+	border: 1px solid white;
 }
 
 .picturrow-boxborder {
-	display: inline-block;
-	width: 71px;
+	float: left;
+	width: 96px;
 	background: #fcfcfc;
 	text-align: center;
 	border: 1px solid #e9e9e9;
@@ -199,49 +207,50 @@ a {
 }
 
 .footertext {
-	padding-left: 240px
+	padding-left: 340px
 }
 
 .textspace {
-	margin-left: 100px;
+	margin-left: 160px;
 }
 
-.topblock-city {
+/* Page - 5days.html */
+
+.header-info__city {
 	display: inline-block;
 	margin-left: 40px;
 	width: 300px;
 }
 
 .weathertable {
-	width: 510px;
+	width: 710px;
 	height: 270px;
 	padding-left: 45px;
 	padding-top: 15px;
 }
 
 .weathertable-dayrow {
-	width: 510px;
+	width: 710px;
 	height: 22px;
 	text-align: center;
 }
 
 .weathertable-dayrow-box {
 	float: left;
-	width: 100px;
+	width: 140px;
 	height: 20px;
 	border: 1px solid;
 }
 
 .weathertable-weather {
-	width: 510px;
+	width: 710px;
 	height: 91px;
-	background-color: lightyellow;
 }
 
 .weathertable-weather-box {
 	float: left;
 	background-color: white;
-	width: 100px;
+	width: 140px;
 	height: 60px;
 	border-left: 1px solid;
 	border-right: 1px solid;
@@ -250,7 +259,7 @@ a {
 
 .weathertable-weather-box-status {
 	float: left;
-	width: 24px;
+	width: 34px;
 	height: 50px;
 	background-color: rgb(255, 255, 255);
 	margin-right: 1px;
@@ -262,14 +271,14 @@ a {
 
 .weathertable-weather-temperature {
 	clear: both;
-	width: 510px;
+	width: 710px;
 	height: 30px;
 	background-color: lightblue;
 }
 
 .weathertable-weather-temperature-box {
 	float: left;
-	width: 100px;
+	width: 140px;
 	height: 30px;
 	background-color: rgb(255, 255, 255);
 	border-left: 1px solid;
@@ -278,39 +287,39 @@ a {
 
 .weathertable-temperature-box-yellow {
 	float: left;
-	width: 18px;
+	width: 28px;
 	height: 15px;
 	background-color: #f8e71c;
 	border: 1px solid;
-	margin-right: 5px;
+	margin-right: 4px;
 	font-size: 10px;
 }
 
 .weathertable-temperature-box-orange {
 	float: left;
-	width: 18px;
+	width: 28px;
 	height: 15px;
 	background-color: #f5a623;
 	border: 1px solid;
-	margin-right: 5px;
+	margin-right: 4px;
 	font-size: 10px;
 }
 
 .weathertable-temperature-box-green {
 	float: left;
-	width: 18px;
+	width: 28px;
 	height: 15px;
 	background-color: #b8ea86;
 	border: 1px solid;
 	margin-right: 4px;
-	margin-left: 1px;
+	margin-left: 4px;
 	font-size: 10px;
 }
 
 .weathertable-middleline {
 	clear: both;
 	background-color: silver;
-	width: 508px;
+	width: 708px;
 	height: 25px;
 	border: 1px solid;
 	text-align: center;
@@ -318,14 +327,14 @@ a {
 
 .weathertable-middleline-row {
 	clear: both;
-	width: 510px;
+	width: 710px;
 	height: 25px;
 	text-align: center;
 }
 
 .weathertable-middleline-row-box {
 	float: left;
-	width: 100px;
+	width: 140px;
 	height: 30px;
 	border-left: 1px solid;
 	border-bottom: 1px solid;
@@ -334,7 +343,7 @@ a {
 
 .weathertable-middleline-row-box-value {
 	float: left;
-	width: 18px;
+	width: 28px;
 	height: 15px;
 	background-color: #d8d8d8;
 	margin-right: 4px;
@@ -346,31 +355,29 @@ a {
 .weathertable-rainfallline {
 	clear: both;
 	background-color: silver;
-	width: 508px;
+	width: 708px;
 	height: 25px;
 	border: 1px solid;
 	text-align: center;
 }
 
 .weathertable-rainfall {
-	width: 510px;
+	width: 710px;
 	height: 61px;
-	background-color: lightyellow;
 }
 
 .weathertable-rainfall-box {
 	float: left;
-	width: 100px;
+	width: 140px;
 	height: 60px;
 	border-left: 1px solid;
 	border-bottom: 1px solid;
 	border-right: 1px solid;
-	background-color: rgb(255, 255, 255);
 }
 
 .weathertable-rainfall-box-water {
 	float: left;
-	width: 23px;
+	width: 33px;
 	height: 22px;
 	background-color: rgb(255, 255, 255);
 	padding-left: 2px;
@@ -378,77 +385,76 @@ a {
 	text-align: center;
 }
 
-.weathertable-water {
-	float: left;
-	width: 510px;
-	height: 14px;
-	background-color: lightblue;
-}
-
 .middlebox {
 	clear: both;
-	width: 510px;
+	width: 708px;
 	height: 30px;
 	background-color: silver;
 	margin-left: 45px;
 	border: 1px solid;
 }
 
-.bottomblock {
+.Sun-and-moon {
 	float: left;
-	width: 510px;
+	width: 710px;
 	height: 180px;
 	margin-left: 45px;
 	margin-top: 10px;
 }
 
-.bottomblock-leftcolumn {
+.Sun-and-moon-leftcolumn {
 	float: left;
-	width: 255px;
+	width: 355px;
 	height: 180px;
 }
 
-.bottomblock-leftcolumn-image {
+.Sun-and-moon-leftcolumn-image {
 	float: left;
 	width: 100px;
 	height: 120px;
 }
 
-.bottomblock-rightcolumn {
+.Sun-and-moon-rightcolumn {
 	float: right;
-	width: 255px;
+	width: 355px;
 	height: 180px;
 }
 
-.bottomblock-rightcolumn-image {
+.Sun-and-moon-rightcolumn-image {
 	float: left;
 	width: 100px;
 	height: 120px;
 }
 
-.bottomblock-rightcolumn-text {
+.Sun-and-moon-rightcolumn-text {
 	float: left;
-	width: 155px;
+	width: 255px;
 	height: 120px;
 }
 
-.bottomblock-leftcolumn-text {
+.Sun-and-moon-leftcolumn-text {
 	float: left;
-	width: 155px;
+	width: 255px;
 	height: 120px;
 }
 
-.bottomblock-leftcolumn-textblock {
+.Sun-and-moon-leftcolumn-textblock {
 	clear: both;
-	width: 255px;
-	height: 75px;
+	width: 355px;
+	height: 60px;
+	padding-left: 20px;
+	font-size: 13px;
 }
 
-.bottomblock-rightcolumn-textblock {
+.Sun-and-moon-rightcolumn-textblock {
 	float: left;
-	width: 255px;
-	height: 75px;
+	width: 355px;
+	height: 60px;
+	padding-left: 20px;
+	font-size: 13px;
 }
+
+/* Page - hystory.html */
 
 .table-text {
 	padding-top: 50px;
