@@ -17,10 +17,11 @@ body {
 	background-color: #e4e4e4;
 	display: inline-block;
 	width: 200px;
-	height: 23px;
+	height: 21px;
 	border: hidden;
 	position: absolute;
 	outline: none;
+	top: 1px;
 }
 
 .main-menu {
@@ -99,7 +100,10 @@ body {
 
 .header-findform::before {
 	content: url(../images/find.png);
-	display: inline-block;
+	position: relative;
+	top: 3px;
+	left: 1px;
+	padding-right: 5px;
 }
 
 .content {
@@ -107,12 +111,12 @@ body {
 	width: 800px;
 }
 
-.main-weather-information {
+.today-weather-information {
 	width: 800px;
 	height: 260px;
 }
 
-.main-weather-information__city-temperature {
+.today-weather-information__city-temperature {
 	display: inline-block;
 	width: 360px;
 	height: 260px;
@@ -120,7 +124,7 @@ body {
 	padding-left: 40px;
 }
 
-.main-weather-information__precipitation-humidity-wind {
+.today-weather-information__precipitation-humidity-wind {
 	display: inline-block;
 	width: 400px;
 	height: 260px;
@@ -129,14 +133,14 @@ body {
 	vertical-align: top;
 }
 
-.main-weather-information__buttonrow {
+.button-temperature-probability-wind{
 	width: 320px;
 	height: 57px;
 	font-size: 14px;
 }
 
 .buttonrow-button-active {
-	float: left;
+	display: inline-block;
 	background-color: #9b9b9b;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	margin-right: 8px;
@@ -146,7 +150,7 @@ body {
 }
 
 .buttonrow-button-noactive {
-	float: left;
+	display: inline-block;
 	background: #f5f5f5;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	margin-right: 8px;
@@ -154,6 +158,7 @@ body {
 	text-align: center;
 	line-height: 55px;
 	padding: 0 8px 0;
+	vertical-align: top;
 }
 
 .probability-of-precipitation {
@@ -192,20 +197,13 @@ body {
 	position: relative;
 }
 
-.levelrow-boxhighmiddle {
-	float: left;
-	width: 24px;
-	height: 25px;
-	border-bottom: 2px solid #1878f0;
-	background-color: white;
-}
 
-.timerow {
+.time-step-3-hours {
 	height: 39px;
 	padding-left: 20px;
 }
 
-.timerow__time {
+.time-probability-of-precipitation {
 	display: inline-block;
 	width: 76px;
 	padding: 10px;
@@ -214,7 +212,7 @@ body {
 	margin-left: -5px;
 }
 
-.picturrow-8days {
+.day-weather-temperature-8days {
 	background: white;
 	height: 154px;
 	padding-left: 20px;
@@ -224,7 +222,7 @@ body {
 	color: #9e9e9e;
 }
 
-.picturrow-8days__box {
+.day-weather-temperature__nextday {
 	display: inline-block;
 	width: 90px;
 	background: white;
@@ -233,7 +231,7 @@ body {
 	border: 1px solid white;
 }
 
-.picturrow-8days__boxborder {
+.day-weather-temperature__active {
 	display: inline-block;
 	width: 90px;
 	background: #fcfcfc;
@@ -260,7 +258,7 @@ body {
 	left: 5px;
 }
 
-.border {
+.day-of-week {
 	border-bottom: 1px solid;
 }
 
@@ -271,13 +269,13 @@ body {
 	padding-top: 15px;
 }
 
-.weathertable-dayrow {
+.weathertable-5days {
 	width: 710px;
 	height: 100px;
 	text-align: center;
 }
 
-.weathertable-dayrow-box {
+.time-of-day-temperature {
 	display: inline-block;
 	width: 140px;
 	height: 100px;
@@ -300,7 +298,7 @@ body {
 	margin-left: -5px;
 }
 
-.weathertable-weather-box-status {
+.time-of-day {
 	display: inline-block;
 	width: 34px;
 	height: 50px;
@@ -308,52 +306,54 @@ body {
 	margin-left: -5px;
 }
 
-.weathertable-weather-box-status-smalltext {
+.text-style-8px {
 	font-size: 8px;
 }
 
-.weathertable-weather-temperature {
-	clear: both;
-	width: 710px;
-	height: 30px;
-	background-color: lightblue;
-}
-
-.weathertable-weather-temperature-box {
-	float: left;
+.temperature-during-the-day {
+	display: inline-block;
 	width: 140px;
 	height: 30px;
 	background-color: rgb(255, 255, 255);
 }
 
-.weathertable-temperature-box-yellow {
-	float: left;
-	width: 28px;
+.temperature-morning {
+	display: inline-block;
+	width: 26px;
 	height: 15px;
 	background-color: #f8e71c;
 	border: 1px solid;
-	margin-right: 4px;
+	margin-right: 2px;
 	font-size: 10px;
 }
 
-.weathertable-temperature-box-orange {
-	float: left;
-	width: 28px;
+.temperature-evening {
+	display: inline-block;
+	width: 26px;
+	height: 15px;
+	background-color: #f8e71c;
+	border: 1px solid;
+	margin-right: 2px;
+	font-size: 10px;
+}
+
+.temperature-daytime {
+	display: inline-block;
+	width: 26px;
 	height: 15px;
 	background-color: #f5a623;
 	border: 1px solid;
-	margin-right: 4px;
+	margin-right: 2px;
 	font-size: 10px;
 }
 
-.weathertable-temperature-box-green {
-	float: left;
-	width: 28px;
+.temperature-night {
+	display: inline-block;
+	width: 26px;
 	height: 15px;
 	background-color: #b8ea86;
 	border: 1px solid;
-	margin-right: 4px;
-	margin-left: 4px;
+	margin-right: 2px;
 	font-size: 10px;
 }
 
@@ -367,13 +367,13 @@ body {
 	line-height: 25px;
 }
 
-.weathertable-max-wind-speed-row {
+.wind-speed-5days {
 	width: 710px;
 	height: 25px;
 	text-align: center;
 }
 
-.weathertable-max-wind-speed-row-box {
+.wind-speed-5days__one-days {
 	display: inline-block;
 	width: 140px;
 	height: 25px;
@@ -393,7 +393,7 @@ body {
 	line-height: 15px;
 }
 
-.weathertable-rainfallline {
+.weathertable-rainfall {
 	background-color: silver;
 	width: 705px;
 	height: 25px;
@@ -403,13 +403,13 @@ body {
 	line-height: 25px;
 }
 
-.weathertable-rainfall {
+.weathertable-rainfall-5days {
 	width: 710px;
 	height: 61px;
 	margin-left: 4px;
 }
 
-.weathertable-rainfall-box {
+.weathertable-rainfall__one-days {
 	display: inline-block;
 	width: 140px;
 	height: 60px;
@@ -445,32 +445,32 @@ body {
 	margin-top: 10px;
 }
 
-.Sun-and-moon-leftcolumn {
+.Sun-and-moon__sun-info {
 	display: inline-block;
 	width: 360px;
 	height: 180px;
 }
 
-.Sun-and-moon-leftcolumn-image {
+.Sun-image {
 	display: inline-block;
 	width: 100px;
 	height: 120px;
 }
 
-.Sun-and-moon-rightcolumn {
+.Sun-and-moon__moon-info {
 	display: inline-block;
 	width: 350px;
 	height: 180px;
 	vertical-align: top;
 }
 
-.Sun-and-moon-rightcolumn-image {
+.moon-image {
 	display: inline-block;
 	width: 100px;
 	height: 120px;
 }
 
-.Sun-and-moon__rightcolumn-text {
+.sunrise-and-sunset {
 	display: inline-block;
 	width: 235px;
 	height: 120px;
@@ -485,14 +485,14 @@ body {
 	font-size: 13px;
 }
 
-.Sun-and-moon-leftcolumn-text {
+.day-length-sunrise-and-sunset {
 	display: inline-block;
 	width: 250px;
 	height: 120px;
 	vertical-align: top;
 }
 
-.Sun-and-moon-leftcolumn-textblock {
+.today-day-length {
 	display: inline-block;
 	width: 355px;
 	height: 60px;
@@ -500,7 +500,7 @@ body {
 	font-size: 13px;
 }
 
-.Sun-and-moon-rightcolumn-textblock {
+.full-moon {
 	display: inline-block;
 	width: 355px;
 	height: 60px;
