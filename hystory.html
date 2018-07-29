@@ -8,27 +8,28 @@
   <style>
     @import url('https://fonts.googleapis.com/css?family=Montserrat');
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <header>
     <nav class="main-menu">
       <ul class="menu-list">
-        <li class="li-main-menu">
-          <a class="a-go-to-other-pages" href="index.html">Сегодня</a>
+        <li class="menu-list__button">
+          <a class="link-to-other-pages" href="index.html">Сегодня</a>
         </li>
-        <li class="li-main-menu">
-          <a class="a-go-to-other-pages" href="5days.html">5 дней</a>
+        <li class="menu-list__button">
+          <a class="link-to-other-pages" href="5days.html">5 дней</a>
         </li>
-        <li class="li-activesite">
-          <a class="a-go-to-other-pages" href="hystory.html">История погоды</a>
+        <li class="menu-list__button menu-list__button--active-button">
+          <a class="link-to-other-pages" href="hystory.html">История погоды</a>
         </li>
       </ul>
     </nav>
     <div class="header-info">
       <p class="header-info__city">Ижевск, Россия</p>
       <form class="header-findform">
-        <input class="input-find-city" type="search" name="q" placeholder="Поиск">
+        <input class="find-city-input" type="search" name="q" placeholder="Поиск">
       </form>
     </div>
   </header>
@@ -36,83 +37,83 @@
   <main class="content">
     <table class="weather-per-year">
       <tr class="first-row">
-        <td></td>
-        <td>Январь</td>
-        <td>Февраль</td>
-        <td>Март</td>
-        <td>Апрель</td>
-        <td>Май</td>
-        <td>Июнь</td>
-        <td>Июль</td>
-        <td>Август</td>
-        <td>Сентябрь</td>
-        <td>Октябрь</td>
-        <td>Ноябрь</td>
-        <td>Декабрь</td>
+        <td class="weather-per-year__cell"></td>
+        <td class="weather-per-year__cell">Январь</td>
+        <td class="weather-per-year__cell">Февраль</td>
+        <td class="weather-per-year__cell">Март</td>
+        <td class="weather-per-year__cell">Апрель</td>
+        <td class="weather-per-year__cell">Май</td>
+        <td class="weather-per-year__cell">Июнь</td>
+        <td class="weather-per-year__cell">Июль</td>
+        <td class="weather-per-year__cell">Август</td>
+        <td class="weather-per-year__cell">Сентябрь</td>
+        <td class="weather-per-year__cell">Октябрь</td>
+        <td class="weather-per-year__cell">Ноябрь</td>
+        <td class="weather-per-year__cell">Декабрь</td>
       </tr>
       <tr class="second-row">
-        <td>Средний
+        <td class="weather-per-year__cell">Средний
           <br/>максимум</td>
-        <td>-9&deg</td>
-        <td>-8&deg</td>
-        <td>14&deg</td>
-        <td>7&deg</td>
-        <td>18&deg</td>
-        <td>23&deg</td>
-        <td>-1&deg</td>
-        <td>5&deg</td>
-        <td>-6&deg</td>
-        <td>-8&deg</td>
-        <td>-5&deg</td>
-        <td>-9&deg</td>
+        <td class="weather-per-year__cell">-9&deg</td>
+        <td class="weather-per-year__cell">-8&deg</td>
+        <td class="weather-per-year__cell">14&deg</td>
+        <td class="weather-per-year__cell">7&deg</td>
+        <td class="weather-per-year__cell">18&deg</td>
+        <td class="weather-per-year__cell">23&deg</td>
+        <td class="weather-per-year__cell">-1&deg</td>
+        <td class="weather-per-year__cell">5&deg</td>
+        <td class="weather-per-year__cell">-6&deg</td>
+        <td class="weather-per-year__cell">-8&deg</td>
+        <td class="weather-per-year__cell">-5&deg</td>
+        <td class="weather-per-year__cell">-9&deg</td>
       </tr>
       <tr class="first-row">
-        <td>Средний
+        <td class="weather-per-year__cell">Средний
           <br/>минимум</td>
-        <td>-9&deg</td>
-        <td>-8&deg</td>
-        <td>-22&deg</td>
-        <td>7&deg</td>
-        <td>18&deg</td>
-        <td>23&deg</td>
-        <td>-6&deg</td>
-        <td>5&deg</td>
-        <td>9&deg</td>
-        <td>-5&deg</td>
-        <td>-1&deg</td>
-        <td>-1&deg</td>
+        <td class="weather-per-year__cell">-9&deg</td>
+        <td class="weather-per-year__cell">-8&deg</td>
+        <td class="weather-per-year__cell">-22&deg</td>
+        <td class="weather-per-year__cell">7&deg</td>
+        <td class="weather-per-year__cell">18&deg</td>
+        <td class="weather-per-year__cell">23&deg</td>
+        <td class="weather-per-year__cell">-6&deg</td>
+        <td class="weather-per-year__cell">5&deg</td>
+        <td class="weather-per-year__cell">9&deg</td>
+        <td class="weather-per-year__cell">-5&deg</td>
+        <td class="weather-per-year__cell">-1&deg</td>
+        <td class="weather-per-year__cell">-1&deg</td>
       </tr>
       <tr class="second-row">
-        <td>Рекордный
+        <td class="weather-per-year__cell">Рекордный
           <br/>максимум</td>
-        <td>-9&deg</td>
-        <td>-8&deg</td>
-        <td>-11&deg</td>
-        <td>7&deg</td>
-        <td>19&deg</td>
-        <td>23&deg</td>
-        <td>-1&deg</td>
-        <td>5&deg</td>
-        <td>-1&deg</td>
-        <td>5&deg</td>
-        <td>-1&deg</td>
-        <td>-9&deg</td>
+        <td class="weather-per-year__cell">-9&deg</td>
+        <td class="weather-per-year__cell">-8&deg</td>
+        <td class="weather-per-year__cell">-11&deg</td>
+        <td class="weather-per-year__cell">7&deg</td>
+        <td class="weather-per-year__cell">19&deg</td>
+        <td class="weather-per-year__cell">23&deg</td>
+        <td class="weather-per-year__cell">-1&deg</td>
+        <td class="weather-per-year__cell">5&deg</td>
+        <td class="weather-per-year__cell">-1&deg</td>
+        <td class="weather-per-year__cell">5&deg</td>
+        <td class="weather-per-year__cell">-1&deg</td>
+        <td class="weather-per-year__cell">-9&deg</td>
       </tr>
       <tr class="first-row">
-        <td>Рекордный
+        <td class="weather-per-year__cell">Рекордный
           <br/>минимум</td>
-        <td>-9&deg</td>
-        <td>-8&deg</td>
-        <td>-17&deg</td>
-        <td>7&deg</td>
-        <td>22&deg</td>
-        <td>23&deg</td>
-        <td>-1&deg</td>
-        <td>5&deg</td>
-        <td>7&deg</td>
-        <td>1&deg</td>
-        <td>4&deg</td>
-        <td>8&deg</td>
+        <td class="weather-per-year__cell">-9&deg</td>
+        <td class="weather-per-year__cell">-8&deg</td>
+        <td class="weather-per-year__cell">-17&deg</td>
+        <td class="weather-per-year__cell">7&deg</td>
+        <td class="weather-per-year__cell">22&deg</td>
+        <td class="weather-per-year__cell">23&deg</td>
+        <td class="weather-per-year__cell">-1&deg</td>
+        <td class="weather-per-year__cell">5&deg</td>
+        <td class="weather-per-year__cell">7&deg</td>
+        <td class="weather-per-year__cell">1&deg</td>
+        <td class="weather-per-year__cell">4&deg</td>
+        <td class="weather-per-year__cell">8&deg</td>
       </tr>
     </table>
   </main>

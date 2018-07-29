@@ -8,27 +8,29 @@
   <style>
     @import url('https://fonts.googleapis.com/css?family=Montserrat');
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
   <header>
     <nav class="main-menu">
       <ul class="menu-list">
-        <li class="li-activesite">
-          <a class="a-go-to-other-pages" href="index.html">Сегодня</a>
+        <li class="menu-list__button menu-list__button--active-button">
+          <a class="link-to-other-pages" href="index.html">Сегодня</a>
         </li>
-        <li class="li-main-menu">
-          <a class="a-go-to-other-pages" href="5days.html">5 дней</a>
+        <li class="menu-list__button">
+          <a class="link-to-other-pages" href="5days.html">5 дней</a>
         </li>
-        <li class="li-main-menu">
-          <a class="a-go-to-other-pages" href="hystory.html">История погоды</a>
+        <li class="menu-list__button">
+          <a class="link-to-other-pages" href="hystory.html">История погоды</a>
         </li>
       </ul>
     </nav>
     <div class="header-info">
       <p class="header-info__pollution">Загрязнение воздуха:8.16</p>
       <form class="header-findform">
-        <input class="input-find-city" type="search" name="q" placeholder="Поиск">
+        <input class="find-city-input" type="search" name="q" placeholder="Поиск">
       </form>
     </div>
   </header>
@@ -43,61 +45,101 @@
       <div class="today-weather-information__precipitation-humidity-wind">
         <p>Вероятность осадков 20%</br>Влажность:45%</br>Ветер: 11 км/ч</p>
         <div class="button-temperature-probability-wind">
-          <div class="buttonrow-button-noactive">
-            Температура
-          </div>
-          <div class="buttonrow-button-active">
-            Вероятность
-            <br/>осадков
-          </div>
-          <div class="buttonrow-button-noactive">
-            Ветер
-          </div>
+          <button class="buttonrow-button-noactive">Температура</button>
+          <button class="buttonrow-button-noactive buttonrow-button-active">Вероятность осадков</button>
+          <button class="buttonrow-button-noactive"> ветер</button>
         </div>
+      </div>
       </div>
     </section>
 
     <section class="probability-of-precipitation">
-      <div class="low-probability"></div>
-      <div class="high-probability">
-        <span class="text-area-above-box">24%</span>
+
+
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
       </div>
-      <div class="low-probability"></div>
-      <div class="high-probability"></div>
-      <div class="low-probability">
-        <span class="text-area-above-box">30%</span>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability"></div>
+        <div>24%</div>
       </div>
-      <div class="high-probability"></div>
-      <div class="low-probability"></div>
-      <div class="high-probability">
-        <span class="text-area-above-box">24%</span>
+
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
       </div>
-      <div class="low-probability"></div>
-      <div class="high-probability"></div>
-      <div class="low-probability">
-        <span class="text-area-above-box">8%</span>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability"></div>
       </div>
-      <div class="high-probability"></div>
-      <div class="low-probability"></div>
-      <div class="high-probability">
-        <span class="text-area-above-box">4%</span>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
+        <div>30%</div>
       </div>
-      <div class="low-probability"></div>
-      <div class="high-probability"></div>
-      <div class="low-probability">
-        <span class="text-area-above-box">6%</span>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability"></div>
       </div>
-      <div class="high-probability"></div>
-      <div class="low-probability"></div>
-      <div class="high-probability">
-        <span class="text-area-above-box">0%</span>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
       </div>
-      <div class="low-probability"></div>
-      <div class="high-probability"></div>
-      <div class="low-probability">
-        <span class="text-area-above-box">1%</span>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability"></div>
+        <div>24%</div>
       </div>
-      <div class="high-probability"></div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability">
+        </div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
+        <div>8%</div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability"></div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability"></div>
+        <div>4%</div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability">
+        </div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
+        <div>6%</div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability"></div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability"></div>
+        <div>0%</div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability">
+        </div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="low-probability"></div>
+        <div>1%</div>
+      </div>
+      <div class="probability-of-precipitation__level-probabolity">
+        <div class="high-probability"></div>
+      </div>
     </section>
 
     <section>
@@ -112,7 +154,7 @@
         <div class="time-probability-of-precipitation">14:00</div>
       </div>
       <div class="day-weather-temperature-8days">
-        <div class="day-weather-temperature__active">
+        <div class="day-weather-temperature__nextday day-weather-temperature__nextday--active">
           <p class="text-style-grey">ср</p>
           <img src="images/cloudy.png" alt="Weather Picture">
           <p>22&deg
