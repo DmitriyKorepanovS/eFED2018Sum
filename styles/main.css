@@ -470,13 +470,15 @@ table .second-row td:nth-child(even) {
 	}
 	.header-findform {
 		position: static;
+		margin-left: 40px;
+		
 	}
 	.probability-of-precipitation {
 		padding: 0;
 		font-size: 10px;
 	}
 	.header-info__pollution {
-		padding: 5px;
+		padding-left: 40px;
 	}
 	.button-temperature-probability-wind {
 		flex-direction: column;
@@ -509,5 +511,10 @@ table .second-row td:nth-child(even) {
 	table {
 		overflow-x: auto;
 		display: block;
+	}
+}
+@media (max-width: 350px) {
+	.buttonrow-button-noactive {
+		font-size: 12px;
 	}
 }
