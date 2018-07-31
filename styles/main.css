@@ -7,7 +7,7 @@ body {
 }
 
 .main-footer {
-	background-color:#01579B;
+	background-color: #01579B;
 	width: 100%;
 	height: 40px;
 	line-height: 40px;
@@ -16,7 +16,7 @@ body {
 }
 
 .find-city-input {
-	background-color:#E1F5FE;
+	background-color: #E1F5FE;
 	display: inline-block;
 	width: 200px;
 	height: 21px;
@@ -94,7 +94,7 @@ body {
 }
 
 .content {
-	min-height: 510px;
+	min-height: 500px;
 }
 
 .today-weather-information {
@@ -131,9 +131,8 @@ body {
 
 .probability-of-precipitation {
 	display: flex;
-	height: 80px;
+	flex-wrap: wrap;
 	color: blue;
-	font-size: 12px;
 	text-align: center;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -141,7 +140,7 @@ body {
 
 .probability-of-precipitation__level-probabolity {
 	width: 100%;
-	height: 80px;
+	height: 70px;
 	display: flex;
 	flex-direction: column-reverse;
 }
@@ -161,8 +160,6 @@ body {
 .time-step-3-hours {
 	display: flex;
 	justify-content: space-around;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 
 .time-probability-of-precipitation {
@@ -358,7 +355,7 @@ body {
 }
 
 .curentday-sun-day-and-moon {
-	background-color:#81D4FA;
+	background-color: #81D4FA;
 	margin-left: 45px;
 	border: 1px solid;
 	line-height: 30px;
@@ -435,28 +432,58 @@ body {
 	z-index: -1;
 }
 
+.three-items {
+	display: flex;
+	flex-grow: 1;
+	min-width: 320px;
+	flex-flow: column;
+}
+
+.two-items {
+	display: flex;
+}
+
 /* Page - hystory.html */
 
-.weather-per-year {
-	padding-top: 50px;
+
+.hystory-table {
 	font-size: 10px;
 	text-align: center;
-	border-spacing: 0;
-	table-layout: fixed;
+	margin-top: 50px;
+}
+
+.row1 {
+	display: flex;
+}
+
+.row1 .cell:nth-child(odd) {
+	background: #81D4FA;
+}
+
+.row2 {
+	display: flex;
+}
+
+.row2 .cell:nth-child(even) {
+	display: flex;
+	background: #81D4FA;
+}
+
+.cell {
+	display: flex;
+	min-width: 10px;
+	min-height: 40px;
 	width: 100%;
+	justify-content: center;
+	align-items: center;
 }
 
-table .first-row td:nth-child(odd) {
-	background: #81D4FA;
-}
-
-table .second-row td:nth-child(even) {
-	background: #81D4FA;
-}
-
-.weather-per-year__cell {
-	width: 59px;
-	height: 28px;
+.hystory-table-vertical {
+	display: none;
+	font-size: 10px;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
@@ -471,7 +498,6 @@ table .second-row td:nth-child(even) {
 	.header-findform {
 		position: static;
 		margin-left: 40px;
-		
 	}
 	.probability-of-precipitation {
 		padding: 0;
@@ -485,9 +511,6 @@ table .second-row td:nth-child(even) {
 	}
 	.buttonrow-button-noactive {
 		margin-bottom: 5px;
-	}
-	.time-probability-of-precipitation {
-		font-size: 2vw;
 	}
 	.textspace {
 		margin-left: 10px;
@@ -512,9 +535,23 @@ table .second-row td:nth-child(even) {
 		overflow-x: auto;
 		display: block;
 	}
+	/* Page - hystory.html */
+	.hystory-table {
+		display: none;
+	}
+	.hystory-table-vertical {
+		display: block;
+	}
 }
+
 @media (max-width: 350px) {
 	.buttonrow-button-noactive {
-		font-size: 12px;
+		font-size: 11px;
+	}
+	.today-weather-information__city-temperature {
+		font-size: 16px;
+	}
+	.today-weather-information__precipitation-humidity-wind {
+		font-size: 16px;
 	}
 }
