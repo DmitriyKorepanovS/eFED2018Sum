@@ -439,12 +439,32 @@ body {
 	flex-flow: column;
 }
 
+.temperature-for-time {
+	height: 70px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
 .two-items {
 	display: flex;
 }
 
-/* Page - hystory.html */
+.two-items-temperature {
+	display: flex;
+	justify-content: space-around;
+}
 
+.high-temperature {
+	height: 30px;
+	background-color: #81D4FA;
+}
+
+.low-temperature {
+	height: 15px;
+	background-color: #81D4FA;
+}
+
+/* Page - hystory.html */
 
 .hystory-table {
 	font-size: 10px;
