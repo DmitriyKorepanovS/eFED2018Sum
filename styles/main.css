@@ -491,6 +491,19 @@ body {
 	height: 15px;
 	background-color: #81D4FA;
 }
+.dayblock {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.day {
+	display: none;
+	border: 1px solid;
+	font-size: 16px;
+	text-align: center;
+}
+
 
 /* Page - hystory.html */
 
@@ -579,8 +592,7 @@ body {
 	.Sun-and-moon__moon-info {
 		padding-left: 5px;
 	}
-	table {
-		overflow-x: auto;
+	.day {
 		display: block;
 	}
 	/* Page - hystory.html */
@@ -601,5 +613,8 @@ body {
 	}
 	.today-weather-information__precipitation-humidity-wind {
 		font-size: 16px;
+	}
+	.main-menu {
+		font-size: 14px;
 	}
 }
