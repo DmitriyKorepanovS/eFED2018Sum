@@ -5,7 +5,7 @@ function makeArray(startNumber, endNumber, step) {
         step = 1;
     }
     if (step < 0) {
-        step = Math.abs(step)
+        step = Math.abs(step);
     }
     if (startNumber > endNumber) {
         while (startNumber >= endNumber) {
