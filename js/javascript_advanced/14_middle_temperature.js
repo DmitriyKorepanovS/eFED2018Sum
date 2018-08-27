@@ -17,13 +17,17 @@ function countAverageValue(array, obj) {
     var currentYear = obj.date;
     var currentCity = obj.city;
     var lastYear = currentYear.getFullYear() - 1;
-    var temperatureArray = [];
+    var selectedByCityArray = [];
+    var selectedByYearArray =[];
+    var temperatureArray =[];
 
-    for (var i = 0; i < array.length; i++) {
-        if ((array[i]['year'] == lastYear) && (array[i]['city'] == currentCity)) {
-            temperatureArray[i] = array[i]['avearage'];
-        }
+    selectedByCityArray = array.filter(e => e.city == currentCity);
+    selectedByYearArray = selectedByCityArray.filter(e => e.year == lastYear);
+    
+    for (var i = 0; i < selectedByYearArray.length; i++) {
+        temperatureArray[i] = array[i]['avearage'];
     }
+
     var total = temperatureArray.reduce((sum, current) => sum + current);
     var avearageTemperature = Math.round(total / temperatureArray.length);
 
