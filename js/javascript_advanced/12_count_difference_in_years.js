@@ -1,6 +1,7 @@
 function countDifferenceInYears(firstDate, secondDate) {
     var years = secondDate.getFullYear() - firstDate.getFullYear();
-    var month = Math.round((secondDate.getMonth() - firstDate.getMonth()) * 0.0833333333333333 * 10) / 10;
+    const ProportionOneMonth = 1/12;
+    var month = Math.round((secondDate.getMonth() - firstDate.getMonth()) * ProportionOneMonth * 10) / 10;
 
     return years + month;
 }
