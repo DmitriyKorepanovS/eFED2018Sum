@@ -1,25 +1,18 @@
-function makeArray(startNumber, endNumber, step) {
-    var result = [];
-
+function makeArray(start, end, step) {
+    var array = [];
     if (step == undefined) {
         step = 1;
     }
-    if (step < 0) {
-        step = Math.abs(step);
-    }
-    if (startNumber > endNumber) {
-        while (startNumber >= endNumber) {
-            result.push(startNumber);
-            startNumber = startNumber - step;
+    if (step > 0) {
+        for (var i = start; i <= end; i += step) {
+            array.push(i);
         }
-        return (result);
     } else {
-        while (startNumber <= endNumber) {
-            result.push(startNumber);
-            startNumber = startNumber + step;
+        for (i = start; i >= end; i += step) {
+            array.push(i);
         }
-        return (result);
     }
+    return array;
 }
 
 console.log(makeArray(1, 10));
