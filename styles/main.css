@@ -632,6 +632,7 @@ body {
 	}
 	.time-of-day-temperature {
 		display: none;
+		margin-right: 24px;
 	}
 
 	.activex {
@@ -642,6 +643,8 @@ body {
 	}
 	.btnNext{
 		display:block;
+		position: absolute;
+		right: 0px;
 	}
 	#buttonForDay{
 		display:flex;
