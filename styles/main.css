@@ -640,15 +640,18 @@ body {
 	}
 	.btnPrevious {
 		display:block;
+		height:102px;
+		width:24px;
 	}
 	.btnNext{
 		display:block;
 		position: absolute;
 		right: 0px;
+		height:102px;
+		width:26px;
 	}
 	#buttonForDay{
 		display:flex;
-		border: 1px solid;
 		align-items: center;
 		justify-content: space-around;
 
