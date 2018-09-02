@@ -1,10 +1,219 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Five-day weather forecast</title>
-  </head>
-  <body>
-    <h1>Историческая справка о погоде на текущий день</h1>
-  </body>
+
+<head>
+  <title>Historical review</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <nav class="main-menu">
+      <ul class="menu-list">
+        <li class="menu-list__button">
+          <a class="link-to-other-pages" href="index.html">Сегодня</a>
+        </li>
+        <li class="menu-list__button">
+          <a class="link-to-other-pages" href="weather-details.html">5 дней</a>
+        </li>
+        <li class="menu-list__button menu-list__button--active-button">
+          <a class="link-to-other-pages" href="historical-review.html">История погоды</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-info">
+      <p class="header-info__city">Ижевск, Россия</p>
+      <form class="header-findform">
+        <input class="find-city-input" type="search" name="q" placeholder="Поиск">
+      </form>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="hystory-table">
+      <div class="row1">
+        <div class="cell"></div>
+        <div class="cell">январь</div>
+        <div class="cell">февраль</div>
+        <div class="cell">март</div>
+        <div class="cell">апрель</div>
+        <div class="cell">май</div>
+        <div class="cell">июнь</div>
+        <div class="cell">июль</div>
+        <div class="cell">август</div>
+        <div class="cell">сентябрь</div>
+        <div class="cell">октябрь</div>
+        <div class="cell">ноябрь</div>
+        <div class="cell">декабрь</div>
+      </div>
+      <div class="row2">
+        <div class="cell">Средний максимум</div>
+        <div class="cell">-9&deg</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">14&deg</div>
+        <div class="cell">7&deg</div>
+        <div class="cell">18&deg</div>
+        <div class="cell">23&deg</div>
+        <div class="cell">-1&deg</div>
+        <div class="cell">5&deg</div>
+        <div class="cell">-6&deg</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-5&deg</div>
+        <div class="cell">-9&deg</div>
+      </div>
+      <div class="row1">
+        <div class="cell">Средний минимум</div>
+        <div class="cell">-10&deg</div>
+        <div class="cell">-6&deg</div>
+        <div class="cell">-22&deg</div>
+        <div class="cell">7&deg</div>
+        <div class="cell">18&deg</div>
+        <div class="cell">23&deg</div>
+        <div class="cell">6&deg</div>
+        <div class="cell">5&deg</div>
+        <div class="cell">9&deg</div>
+        <div class="cell">-5&deg</div>
+        <div class="cell">-1&deg</div>
+        <div class="cell">-1&deg</div>
+      </div>
+      <div class="row2">
+        <div class="cell">Рекордный максимум</div>
+        <div class="cell">-9&deg</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-11&deg</div>
+        <div class="cell">7&deg</div>
+        <div class="cell">19&deg</div>
+        <div class="cell">23&deg</div>
+        <div class="cell">-1&deg</div>
+        <div class="cell">5&deg</div>
+        <div class="cell">-1&deg</div>
+        <div class="cell">5&deg</div>
+        <div class="cell">-1&deg</div>
+        <div class="cell">-9&deg</div>
+      </div>
+      <div class="row1">
+        <div class="cell">Рекордный минимум</div>
+        <div class="cell">-10&deg</div>
+        <div class="cell">-6&deg</div>
+        <div class="cell">-17&deg</div>
+        <div class="cell">7&deg</div>
+        <div class="cell">22&deg</div>
+        <div class="cell">23&deg</div>
+        <div class="cell">-1&deg</div>
+        <div class="cell">5&deg</div>
+        <div class="cell">7&deg</div>
+        <div class="cell">1&deg</div>
+        <div class="cell">4&deg</div>
+        <div class="cell">8&deg </div>
+      </div>
+
+    </div>
+    <div class="hystory-table-vertical">
+      <div class="row1">
+        <div class="cell"></div>
+        <div class="cell">Средний максимум</div>
+        <div class="cell">Средний минимум</div>
+        <div class="cell">Рекордный максимум</div>
+        <div class="cell">Рекордный минимум</div>
+      </div>
+      <div class="row2">
+        <div class="cell">Январь</div>
+        <div class="cell">-9&deg</div>
+        <div class="cell">-10&deg</div>
+        <div class="cell">-9&deg</div>
+        <div class="cell">-10&deg</div>
+      </div>
+      <div class="row1">
+        <div class="cell">Февраль</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+      </div>
+      <div class="row2">
+        <div class="cell">Март</div>
+        <div class="cell">14&deg</div>
+        <div class="cell">-22&deg</div>
+        <div class="cell">-11&deg</div>
+        <div class="cell">-17&deg</div>
+      </div>
+      <div class="row1">
+        <div class="cell">Апрель</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+      </div>
+      <div class="row2">
+        <div class="cell">Май</div>
+        <div class="cell">14&deg</div>
+        <div class="cell">-22&deg</div>
+        <div class="cell">-11&deg</div>
+        <div class="cell">-17&deg</div>
+      </div>
+      <div class="row1">
+        <div class="cell">Июнь</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+      </div>
+      <div class="row2">
+        <div class="cell">Июль</div>
+        <div class="cell">14&deg</div>
+        <div class="cell">-22&deg</div>
+        <div class="cell">-11&deg</div>
+        <div class="cell">-17&deg</div>
+      </div>
+      <div class="row1">
+        <div class="cell">Август</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+      </div>
+      <div class="row2">
+        <div class="cell">Сентябрь</div>
+        <div class="cell">14&deg</div>
+        <div class="cell">-22&deg</div>
+        <div class="cell">-11&deg</div>
+        <div class="cell">-17&deg</div>
+      </div>
+      <div class="row1">
+        <div class="cell">Октябрь</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+      </div>
+      <div class="row2">
+        <div class="cell">Ноябрь</div>
+        <div class="cell">14&deg</div>
+        <div class="cell">-22&deg</div>
+        <div class="cell">-11&deg</div>
+        <div class="cell">-17&deg</div>
+      </div>
+      <div class="row1">
+        <div class="cell">Декабрь</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+        <div class="cell">-8&deg</div>
+        <div class="cell">-6&deg</div>
+      </div>
+
+
+
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    2018 &copy copyright
+  </footer>
+</body>
+
 </html>
