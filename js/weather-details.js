@@ -1,9 +1,9 @@
 var fiveDaysContainer = document.getElementById('weathertable-5days');
 var elements = document.querySelectorAll('.time-of-day-temperature');
 
-fiveDaysContainer.addEventListener ("click", switchInfo );
+fiveDaysContainer.addEventListener("click", switchInfo);
 
-function switchInfo (event) {
+function switchInfo(event) {
   if (event.target.className === 'btnNext') {
     showNext()
   }
@@ -54,8 +54,10 @@ function showPrevious() {
 var buttonForDay = document.getElementById('buttonForDay');
 var elementButtonDayOfWeek = document.querySelectorAll('.buttonDayOfWeek');
 
-buttonForDay.addEventListener ("click", switchButton );
- function switchButton (event) {
+buttonForDay.addEventListener("click", switchButton);
+
+function switchButton(event) {
+  var index;
   if (event.target.className === 'buttonDayOfWeek') {
     for (var i = 0; i < elementButtonDayOfWeek.length; i++) {
       if (elementButtonDayOfWeek[i].classList.contains('activeDay')) {
@@ -65,7 +67,7 @@ buttonForDay.addEventListener ("click", switchButton );
     }
     for (var i = 0; i < elementButtonDayOfWeek.length; i++) {
       if (elementButtonDayOfWeek[i].classList.contains('activeDay')) {
-        var index = i;
+        index = i;
       }
     }
     showDay(index);
@@ -86,6 +88,7 @@ function showButton(position) {
   for (var i = 0; i < elementButtonDayOfWeek.length; i++) {
     if (elementButtonDayOfWeek[i].classList.contains('activeDay')) {
       elementButtonDayOfWeek[i].classList.remove('activeDay')
+      break
     }
   }
   elementButtonDayOfWeek[position].classList.add('activeDay');

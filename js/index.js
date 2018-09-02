@@ -1,13 +1,11 @@
 var BtnTemperatureProbabilityWind = document.getElementById('button-temperature-probability-wind');
 var elementButtonrow = document.querySelectorAll('.buttonrow-button-noactive');
-console.log(elementButtonrow)
 
 BtnTemperatureProbabilityWind.addEventListener("click", switchButtonStatistic)
 
 function switchButtonStatistic() {
 
   if (event.target.className === 'buttonrow-button-noactive') {
-    console.log(event.target);
     showButton()
   }
 }
@@ -28,9 +26,7 @@ function showButton() {
   showSection(indexDiv)
 }
 
-
-
-var Section= document.querySelectorAll('.probability-of-precipitation');
+var Section = document.querySelectorAll('.probability-of-precipitation');
 
 function showSection(indexDiv) {
   for (var i = 0; i < Section.length; i++) {
@@ -40,6 +36,4 @@ function showSection(indexDiv) {
       break
     }
   }
-
-
 }
