@@ -114,7 +114,7 @@ body {
 	vertical-align: top;
 }
 
-.button-temperature-probability-wind {
+#button-temperature-probability-wind {
 	display: flex;
 	font-size: 14px;
 	margin: 5px;
@@ -136,6 +136,10 @@ body {
 	text-align: center;
 	padding-left: 15px;
 	padding-right: 15px;
+	display:none;
+}
+.activeSection{
+	display:flex;
 }
 
 .probability-of-precipitation__level-probabolity {
@@ -580,7 +584,7 @@ body {
 	.header-info__pollution {
 		padding-left: 40px;
 	}
-	.button-temperature-probability-wind {
+	#button-temperature-probability-wind {
 		flex-direction: column;
 	}
 	.buttonrow-button-noactive {

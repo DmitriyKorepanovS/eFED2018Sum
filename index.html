@@ -44,15 +44,79 @@
       </div>
       <div class="today-weather-information__precipitation-humidity-wind">
         <p>Вероятность осадков 20%</br>Влажность:45%</br>Ветер: 11 км/ч</p>
-        <div class="button-temperature-probability-wind">
-          <button onclick="location.href = 'temperature.html'" class="buttonrow-button-noactive">Температура</button>
-          <button onclick="location.href = 'index.html'" class="buttonrow-button-noactive buttonrow-button-active ">Вероятность осадков</button>
-          <button onclick="location.href = 'wind.html'" class="buttonrow-button-noactive "> ветер</button>
+        <div id="button-temperature-probability-wind">
+          <button class="buttonrow-button-noactive buttonrow-button-active">Температура</button>
+          <button class="buttonrow-button-noactive">Вероятность осадков</button>
+          <button class="buttonrow-button-noactive"> ветер</button>
         </div>
       </div>
       </div>
     </section>
+    <section class="probability-of-precipitation activeSection">
+      <div class="three-items">
+        <div class="two-items-temperature">
 
+          <div class="temperature-for-time">
+            <div class="high-temperature"></div>
+            <div>14</div>
+          </div>
+
+
+          <div class="temperature-for-time">
+            <div class="high-temperature"></div>
+            <div>14</div>
+          </div>
+
+          <div class="temperature-for-time">
+            <div class="high-temperature"></div>
+            <div>12</div>
+          </div>
+
+          <div class="temperature-for-time">
+            <div class="low-temperature"></div>
+            <div>12</div>
+          </div>
+
+        </div>
+        <div class="time-step-3-hours ">
+          <div class="time-probability-of-precipitation ">17:00</div>
+          <div class="time-probability-of-precipitation ">20:00</div>
+          <div class="time-probability-of-precipitation ">23:00</div>
+          <div class="time-probability-of-precipitation ">02:00</div>
+        </div>
+      </div>
+      <div class="three-items ">
+        <div class="two-items-temperature">
+
+          <div class="temperature-for-time">
+            <div class="high-temperature"></div>
+            <div>15</div>
+          </div>
+
+          <div class="temperature-for-time">
+            <div class="low-temperature"></div>
+            <div>13</div>
+          </div>
+
+          <div class="temperature-for-time">
+            <div class="high-temperature"></div>
+            <div>14</div>
+          </div>
+
+          <div class="temperature-for-time">
+            <div class="high-temperature"></div>
+            <div>14</div>
+          </div>
+
+        </div>
+        <div class="time-step-3-hours ">
+          <div class="time-probability-of-precipitation ">05:00</div>
+          <div class="time-probability-of-precipitation ">08:00</div>
+          <div class="time-probability-of-precipitation ">11:00</div>
+          <div class="time-probability-of-precipitation ">14:00</div>
+        </div>
+      </div>
+    </section>
     <section class="probability-of-precipitation ">
       <div class="three-items">
         <div class="two-items">
@@ -158,6 +222,82 @@
         </div>
       </div>
     </section>
+    <section class="probability-of-precipitation ">
+      <div class="three-items">
+          <div class="two-items-temperature">
+
+              <div class="temperature-for-time">
+                  <div class="wind-arrow40">
+                      <img src="images/wind.svg" alt="wind picture">
+                  </div>
+                  <div>14</div>
+              </div>
+
+
+              <div class="temperature-for-time">
+                  <div class="wind-arrow80">
+                      <img src="images/wind.svg" alt="wind picture">
+                  </div>
+                  <div>14</div>
+              </div>
+
+              <div class="temperature-for-time">
+                  <div class="wind-arrow60">
+                      <img src="images/wind.svg" alt="wind picture">
+                  </div>
+                  <div>12</div>
+              </div>
+
+              <div class="temperature-for-time">
+                  <div class="wind-arrow100">
+                      <img src="images/wind.svg" alt="wind picture">
+                  </div>
+                  <div>12</div>
+              </div>
+
+          </div>
+          <div class="time-step-3-hours ">
+              <div class="time-probability-of-precipitation ">17:00</div>
+              <div class="time-probability-of-precipitation ">20:00</div>
+              <div class="time-probability-of-precipitation ">23:00</div>
+              <div class="time-probability-of-precipitation ">02:00</div>
+          </div>
+      </div>
+      <div class="three-items ">
+          <div class="two-items-temperature">
+              <div class="temperature-for-time">
+                  <div class="wind-arrow40">
+                      <img src="images/wind.svg" alt="wind picture">
+                  </div>
+                  <div>15</div>
+              </div>
+              <div class="temperature-for-time">
+                  <div class="wind-arrow200">
+                      <img src="images/wind.svg" alt="wind picture">
+                  </div>
+                  <div>13</div>
+              </div>
+              <div class="temperature-for-time">
+                  <div class="wind-arrow240">
+                      <img src="images/wind.svg" alt="wind picture">
+                  </div>
+                  <div>14</div>
+              </div>
+              <div class="temperature-for-time">
+                  <div class="wind-arrow270">
+                      <img src="images/wind.svg" alt="wind picture">
+                  </div>
+                  <div>14</div>
+              </div>
+          </div>
+          <div class="time-step-3-hours ">
+              <div class="time-probability-of-precipitation ">05:00</div>
+              <div class="time-probability-of-precipitation ">08:00</div>
+              <div class="time-probability-of-precipitation ">11:00</div>
+              <div class="time-probability-of-precipitation ">14:00</div>
+          </div>
+      </div>
+  </section>
 
     <section>
       </div>
@@ -183,35 +323,35 @@
             <span class="text-style-grey ">12&deg</span>
           </p>
         </div>
-        <div class="day-weather-temperature__nextday ">
+        <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">сб</p>
           <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
           <p>26&deg
             <span class="text-style-grey ">13&deg</span>
           </p>
         </div>
-        <div class="day-weather-temperature__nextday ">
+        <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">вс</p>
           <img src="images/partly_cloudy.png " alt="Weather Picture ">
           <p>27&deg
             <span class="text-style-grey ">14&deg</span>
           </p>
         </div>
-        <div class="day-weather-temperature__nextday ">
+        <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">пн</p>
           <img src="images/partly_cloudy.png " alt="Weather Picture ">
           <p>28&deg
             <span class="text-style-grey ">14&deg</span>
           </p>
         </div>
-        <div class="day-weather-temperature__nextday ">
+        <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">вт</p>
           <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
           <p>28&deg
             <span class="text-style-grey ">14&deg</span>
           </p>
         </div>
-        <div class="day-weather-temperature__nextday ">
+        <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">ср</p>
           <img src="images/partly_cloudy.png " alt="Weather Picture ">
           <p>28&deg
