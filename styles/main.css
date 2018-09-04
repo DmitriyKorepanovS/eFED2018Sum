@@ -31,7 +31,7 @@ body {
 	position: relative;
 }
 
-.text-style-big-temperature {
+#text-style-big-temperature {
 	vertical-align: top;
 	font-size: 40px;
 	padding-left: 20px;
@@ -530,19 +530,19 @@ body {
 	margin-top: 50px;
 }
 
-.row1 {
+.row1, #averageMin, #recordMin {
 	display: flex;
 }
 
-.row1 .cell:nth-child(odd) {
+.row1 .cell:nth-child(odd), #averageMin .cell:nth-child(odd), #recordMin .cell:nth-child(odd) {
 	background: #81D4FA;
 }
 
-.row2 {
+.row2, #averageMax, #recordMax {
 	display: flex;
 }
 
-.row2 .cell:nth-child(even) {
+.row2 .cell:nth-child(even), #averageMax .cell:nth-child(even), #recordMax .cell:nth-child(even) {
 	display: flex;
 	background: #81D4FA;
 }
