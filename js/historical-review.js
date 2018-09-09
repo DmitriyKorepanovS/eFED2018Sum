@@ -38,7 +38,6 @@ findCityInput.addEventListener("change", changeCity2);
 
 function changeCity2() {
     var cityHistorical = findCityInput.value;
-    alert(cityHistorical);
     getAverage(cellAverageMax, 'max', cityHistorical);
     getAverage(cellAverageMin, 'min', cityHistorical);
     getRecord(cellrecordMax, 'RecordMax', cityHistorical);
@@ -51,3 +50,6 @@ function changeCityInput(cityHistorical) {
     var currentCityInput = document.getElementById('currentCityInput');
     currentCityInput.textContent = cityHistorical;
 }
+document.getElementById('header-findform').addEventListener('submit', function (event) {
+    event.preventDefault();
+});

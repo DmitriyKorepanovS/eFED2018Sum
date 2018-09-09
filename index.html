@@ -28,8 +28,8 @@
       </ul>
     </nav>
     <div class="header-info">
-      <p class="header-info__pollution">Загрязнение воздуха:8.16</p>
-      <form class="header-findform">
+      <p class="header-info__pollution">Загрязнение воздуха:<span id ="pollution"></span></p>
+      <form id="header-findform">
         <input id="findCityInput" type="search" name="q" placeholder="Поиск">
       </form>
     </div>
@@ -43,7 +43,7 @@
         <span id="text-style-big-temperature">22</span>
       </div>
       <div class="today-weather-information__precipitation-humidity-wind">
-        <p>Вероятность осадков 20%</br>Влажность:<span id="humidity">45%</span></br>Ветер: 11 км/ч</p>
+        <p>Вероятность осадков 20%</br>Влажность:<span id="humidity">45%</span></br>Ветер: <span id="wind"></span>м/с</p>
         <div id="button-temperature-probability-wind">
           <button class="buttonrow-button-noactive buttonrow-button-active">Температура</button>
           <button class="buttonrow-button-noactive">Вероятность осадков</button>

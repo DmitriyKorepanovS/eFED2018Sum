@@ -74,7 +74,7 @@ body {
 	padding-left: 50px;
 }
 
-.header-findform {
+#header-findform {
 	height: 23px;
 	width: 230px;
 	border: 1px solid;
@@ -86,7 +86,7 @@ body {
 	transform: translateY(-50%);
 }
 
-.header-findform::before {
+#header-findform::before {
 	content: url(../images/find.png);
 	position: relative;
 	top: 3px;
@@ -578,7 +578,7 @@ body {
 		justify-content: space-around;
 	}
 
-	.header-findform {
+	#header-findform {
 		position: static;
 		margin-left: 40px;
 	}
