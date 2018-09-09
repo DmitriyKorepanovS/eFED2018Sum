@@ -10,28 +10,44 @@ var cellrecordMax = recordMax.querySelectorAll('.cell');
 var recordMin = document.getElementById('recordMin');
 var cellrecordMin = recordMin.querySelectorAll('.cell');
 
-var city = 'Izhevsk';
 var year = '2016';
+var cityHistorical = 'Izhevsk';
 
-
-
-var selectedByCity = historicalReviewMock[city][year]
-
-function getAverage(array, proprerty) {
+function getAverage(array, proprerty, cityHistorical) {
+    var selectedByCity = historicalReviewMock[cityHistorical][year]
     for (var i = 0; i < selectedByCity.length; i++) {
         array[i + 1].textContent = selectedByCity[i][proprerty];
     }
 }
 
-getAverage(cellAverageMax, 'max');
-getAverage(cellAverageMin, 'min');
+getAverage(cellAverageMax, 'max', cityHistorical);
+getAverage(cellAverageMin, 'min', cityHistorical);
+getRecord(cellrecordMax, 'RecordMax', cityHistorical);
+getRecord(cellrecordMin, 'RecordMin', cityHistorical);
 
-for (var i = 0; i < selectedByCity.length; i++) {
-    cellrecordMax[i + 1].textContent = selectedByCity[i]['avearage'];
+function getRecord(array, proprerty, cityHistorical) {
+    var selectedByCity = historicalReviewMock[cityHistorical][year]
+    for (var i = 0; i < selectedByCity.length; i++) {
+        array[i + 1].textContent = selectedByCity[i][proprerty];
+    }
 }
 
-for (var i = 0; i < selectedByCity.length; i++) {
-    cellrecordMin[i + 1].textContent = selectedByCity[i]['avearage'];
+
+var findCityInput = document.getElementById('findCityInput');
+findCityInput.addEventListener("change", changeCity2);
+
+function changeCity2() {
+    var cityHistorical = findCityInput.value;
+    alert(cityHistorical);
+    getAverage(cellAverageMax, 'max', cityHistorical);
+    getAverage(cellAverageMin, 'min', cityHistorical);
+    getRecord(cellrecordMax, 'RecordMax', cityHistorical);
+    getRecord(cellrecordMin, 'RecordMin', cityHistorical);
+     
+    changeCityInput(cityHistorical);
 }
 
-console.log(selectedByCity);
+function changeCityInput(cityHistorical) {
+    var currentCityInput = document.getElementById('currentCityInput');
+    currentCityInput.textContent = cityHistorical;
+}

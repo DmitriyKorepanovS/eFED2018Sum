@@ -3474,62 +3474,74 @@ var historicalReviewMock = {
     ],
     "2016": [
       {
-        "avearage": -10,
+        "RecordMin": -10,
+        "RecordMax": -1,
         "min": -8,
         "max": -3
       },
       {
-        "avearage": -8,
+        "RecordMin": -8,
+        "RecordMax": 4,
         "min": -6,
         "max": 2
       },
       {
-        "avearage": 0,
+        "RecordMin": 0,
+        "RecordMax": 14,
         "min": -22,
         "max": 12
       },
       {
-        "avearage": 2,
+        "RecordMin": 2,
+        "RecordMax": 13,
         "min": 5,
         "max": 11
       },
       {
-        "avearage": 10,
+        "RecordMin": 10,
+        "RecordMax": 32,
         "min": -1,
         "max": 30
       },
       {
-        "avearage": 19,
+        "RecordMin": 19,
+        "RecordMax": 27,
         "min": -3,
         "max": 25
       },
       {
-        "avearage": 23,
+        "RecordMin": 23,
+        "RecordMax": 36,
         "min": 22,
-        "max": 44
+        "max": 34
       },
       {
-        "avearage": 18,
+        "RecordMin": 18,
+        "RecordMax": 37,
         "min": 1,
         "max": 35
       },
       {
-        "avearage": 8,
+        "RecordMin": 8,
+        "RecordMax": 22,
         "min": -4,
         "max": 19
       },
       {
-        "avearage": 3,
+        "RecordMin": 3,
+        "RecordMax": 10,
         "min": 3,
         "max": 8
       },
       {
-        "avearage": -2,
+        "RecordMin": -2,
+        "RecordMax": 10,
         "min": -10,
         "max": 8
       },
       {
-        "avearage": -7,
+        "RecordMin": -7,
+        "RecordMax": 18,
         "min": -14,
         "max": 16
       }
@@ -7010,62 +7022,74 @@ var historicalReviewMock = {
     ],
     "2016": [
       {
-        "avearage": -2,
+        "RecordMin": -6,
+        "RecordMax": -16,
         "min": -4,
         "max": 14
       },
       {
-        "avearage": -3,
+        "RecordMin": -13,
+        "RecordMax": 20,
         "min": -11,
         "max": 18
       },
       {
-        "avearage": 0,
+        "RecordMin": 3,
+        "RecordMax": 24,
         "min": 5,
         "max": 22
       },
       {
-        "avearage": 12,
+        "RecordMin": 9,
+        "RecordMax": 24,
         "min": 11,
         "max": 22
       },
       {
-        "avearage": 15,
+        "RecordMin": 18,
+        "RecordMax": 36,
         "min": 20,
         "max": 34
       },
       {
-        "avearage": 19,
+        "RecordMin": 0,
+        "RecordMax": 30,
         "min": 1,
         "max": 29
       },
       {
-        "avearage": 20,
+        "RecordMin": -8,
+        "RecordMax": 37,
         "min": 10,
         "max": 35
       },
       {
-        "avearage": 21,
+        "RecordMin": 18,
+        "RecordMax": 36,
         "min": 20,
-        "max": 43
+        "max": 33
       },
       {
-        "avearage": 18,
+        "RecordMin": 12,
+        "RecordMax": 28,
         "min": 14,
         "max": 26
       },
       {
-        "avearage": 13,
+        "RecordMin": -6,
+        "RecordMax": 27,
         "min": -4,
-        "max": 35
+        "max": 25
       },
       {
-        "avearage": 2,
+        "RecordMin": 5,
+        "RecordMax": 12,
         "min": 7,
         "max": 10
       },
       {
-        "avearage": -2,
+        "RecordMin": -3,
+        "RecordMax": 9,
         "min": -6,
         "max": 7
       }
@@ -10546,62 +10570,74 @@ var historicalReviewMock = {
     ],
     "2016": [
       {
-        "avearage": -12,
+        "RecordMin": -37,
+        "RecordMax": 6,
         "min": -35,
         "max": 4
       },
       {
-        "avearage": -18,
+        "RecordMin": -40,
+        "RecordMax": 6,
         "min": -39,
         "max": 4
       },
       {
-        "avearage": -4,
+        "RecordMin": -17,
+        "RecordMax": 8,
         "min": -15,
         "max": 6
       },
       {
-        "avearage": 5,
+        "RecordMin": -17,
+        "RecordMax": 24,
         "min": -15,
         "max": 22
       },
       {
-        "avearage": 14,
+        "RecordMin": 18,
+        "RecordMax": 37,
         "min": 16,
         "max": 35
       },
       {
-        "avearage": 21,
+        "RecordMin": 8,
+        "RecordMax": 37,
         "min": 11,
         "max": 36
       },
       {
-        "avearage": 26,
+        "RecordMin": 12,
+        "RecordMax": 32,
         "min": 14,
-        "max": 40
+        "max": 30
       },
       {
-        "avearage": 28,
+        "RecordMin": 2,
+        "RecordMax": 38,
         "min": 4,
         "max": 36
       },
       {
-        "avearage": 18,
+        "RecordMin": 6,
+        "RecordMax": 30,
         "min": 8,
         "max": 28
       },
       {
-        "avearage": 7,
+        "RecordMin": -12,
+        "RecordMax": 32,
         "min": -15,
         "max": 29
       },
       {
-        "avearage": -1,
+        "RecordMin": -21,
+        "RecordMax": 13,
         "min": -20,
         "max": 11
       },
       {
-        "avearage": -16,
+        "RecordMin": -18,
+        "RecordMax": -2,
         "min": -16,
         "max": -4
       }

@@ -30,7 +30,7 @@
     <div class="header-info">
       <p class="header-info__pollution">Загрязнение воздуха:8.16</p>
       <form class="header-findform">
-        <input class="find-city-input" type="search" name="q" placeholder="Поиск">
+        <input id="findCityInput" type="search" name="q" placeholder="Поиск">
       </form>
     </div>
   </header>
@@ -38,12 +38,12 @@
   <main class="content">
     <section class="today-weather-information">
       <div class="today-weather-information__city-temperature">
-        <p>Ижевск, Россия </br>cреда</br>облачно</p>
+        <p><span id="currentCityMain">Izhevsk</span></br>cреда</br>облачно</p>
         <img src="images/Sunny_Weather.png" alt="Current Weather Picture" width="80px">
-        <span id="text-style-big-temperature">22&degC</span>
+        <span id="text-style-big-temperature">22</span>
       </div>
       <div class="today-weather-information__precipitation-humidity-wind">
-        <p>Вероятность осадков 20%</br>Влажность:45%</br>Ветер: 11 км/ч</p>
+        <p>Вероятность осадков 20%</br>Влажность:<span id="humidity">45%</span></br>Ветер: 11 км/ч</p>
         <div id="button-temperature-probability-wind">
           <button class="buttonrow-button-noactive buttonrow-button-active">Температура</button>
           <button class="buttonrow-button-noactive">Вероятность осадков</button>
@@ -301,7 +301,7 @@
 
     <section>
       </div>
-      <div class="day-weather-temperature-8days ">
+      <div id="dayWeather8days">
         <div class="day-weather-temperature__nextday day-weather-temperature__nextday--active ">
           <p class="text-style-grey ">ср</p>
           <img src="images/cloudy.png " alt="Weather Picture ">
