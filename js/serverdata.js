@@ -1,31 +1,40 @@
-//var city='Izhevsk';
+var nowDate = new Date();
+var dayOfWeek = document.getElementById('dayOfWeek');
+
+function getNamesDays(date) {
+  var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  return days[date.getDay()];
+}
+dayOfWeek.textContent = getNamesDays(nowDate);
+
+
 function transform(str) {
-  var superArray = JSON.parse(str)
-  console.log (superArray)
+  var parsedArray = JSON.parse(str)
+  console.log(parsedArray)
 
   var renderData = {
-    temp: superArray.main.temp,
-    humidity: superArray.main.humidity,
-    wind: superArray.wind.speed
+    temp: parsedArray.main.temp,
+    humidity: parsedArray.main.humidity,
+    wind: parsedArray.wind.speed
   };
 
   render(renderData);
 }
+
 function render(renderData) {
   var currentTemperature = document.getElementById('text-style-big-temperature');
   var currentHumidity = document.getElementById('humidity');
-  var wind =  document.getElementById('wind');
+  var wind = document.getElementById('wind');
 
-  console.log(currentHumidity.textContent = renderData.humidity + `%`);
-  console.log(currentTemperature.textContent = Math.round(renderData.temp) + `С`);
-  console.log(wind.textContent = renderData.wind);
+  currentHumidity.textContent = renderData.humidity + `%`;
+  currentTemperature.textContent = Math.round(renderData.temp) + `С`;
+  wind.textContent = renderData.wind;
 }
 
 function transformFiveDays(str) {
-  var superArray = JSON.parse(str)
+  var parsedArray = JSON.parse(str)
 
-  var renderData = {
-  };
+  var renderData = {};
 
   renderFiveDays(renderData);
 }
@@ -36,16 +45,15 @@ function renderFiveDays(renderData) {
 }
 
 function transformPollution(str) {
-  var superArray = JSON.parse(str)
-  console.log(superArray);
+  var parsedArray = JSON.parse(str)
   var renderData = {
- data:superArray.data[36].value
+    data: parsedArray.data[36].value
   };
-  console.log(renderData);
+
   renderPollution(renderData);
 }
 
-function  renderPollution (renderData){
+function renderPollution(renderData) {
   var pollution = document.getElementById('pollution');
   pollution.textContent = renderData.data;
 
@@ -56,10 +64,6 @@ function renderCity(renderData) {
   var currentCityMain = document.getElementById('currentCityMain');
   currentCityMain.textContent = renderData;
 }
-//renderCity(city) 
-
-
-
 
 function loadArray(callback, city) {
   var xhr = new XMLHttpRequest();
@@ -82,7 +86,8 @@ function loadArray(callback, city) {
 }
 var city = `http://api.openweathermap.org/data/2.5/weather?q=Izhevsk&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
 loadArray(transform, city)
-
+var pollution = `http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=e2c078e26648e8e09b6e90e982007c80`;
+loadArray(transformPollution, pollution)
 
 var findCityInput = document.getElementById('findCityInput');
 findCityInput.addEventListener("change", changeCity);
@@ -97,8 +102,7 @@ function changeCity() {
   var pollution = `http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=e2c078e26648e8e09b6e90e982007c80`;
   loadArray(transform, serchRequest);
   loadArray(transformFiveDays, fiveDaysInfo)
-  loadArray (transformPollution, pollution)
-
+  loadArray(transformPollution, pollution)
 }
 
 document.getElementById('header-findform').addEventListener('submit', function (event) {
