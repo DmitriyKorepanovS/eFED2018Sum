@@ -35,7 +35,7 @@
     </div>
   </header>
 
-  <main class="content">
+  <main id="content">
     <section class="today-weather-information">
       <div class="today-weather-information__city-temperature">
         <p><span id="currentCityMain">Izhevsk</span></br><span id ="dayOfWeek">понедельник</span></br>облачно</p>
@@ -43,7 +43,7 @@
         <span id="text-style-big-temperature">22</span>
       </div>
       <div class="today-weather-information__precipitation-humidity-wind">
-        <p>Вероятность осадков 20%</br>Влажность:<span id="humidity">45%</span></br>Ветер: <span id="wind"></span>м/с</p>
+        <p>Вероятность осадков: <span id="precipitation">22%</span> </br>Влажность:<span id="humidity">45%</span></br>Ветер: <span id="wind"></span>м/с</p>
         <div id="button-temperature-probability-wind">
           <button class="buttonrow-button-noactive buttonrow-button-active">Температура</button>
           <button class="buttonrow-button-noactive">Вероятность осадков</button>
@@ -54,27 +54,27 @@
     </section>
     <section class="probability-of-precipitation activeSection">
       <div class="three-items">
-        <div class="two-items-temperature">
+        <div id="two-items-temperature">
 
           <div class="temperature-for-time">
-            <div class="high-temperature"></div>
-            <div>14</div>
+            <div class="heightTemp"></div>
+            <div class ="temp">14</div>
           </div>
 
 
           <div class="temperature-for-time">
-            <div class="high-temperature"></div>
-            <div>14</div>
+            <div class="heightTemp"></div>
+            <div class ="temp">14</div>
           </div>
 
           <div class="temperature-for-time">
-            <div class="high-temperature"></div>
-            <div>12</div>
+            <div class="heightTemp"></div>
+            <div class ="temp">12</div>
           </div>
 
           <div class="temperature-for-time">
-            <div class="low-temperature"></div>
-            <div>12</div>
+            <div class="heightTemp"></div>
+            <div class ="temp">12</div>
           </div>
 
         </div>
@@ -86,26 +86,26 @@
         </div>
       </div>
       <div class="three-items ">
-        <div class="two-items-temperature">
+        <div id="two-items-temperaturePart2">
 
           <div class="temperature-for-time">
-            <div class="high-temperature"></div>
-            <div>15</div>
+            <div class="heightTemp"></div>
+            <div class ="temp">15</div>
           </div>
 
           <div class="temperature-for-time">
-            <div class="low-temperature"></div>
-            <div>13</div>
+            <div class="heightTemp"></div>
+            <div class ="temp">13</div>
           </div>
 
           <div class="temperature-for-time">
-            <div class="high-temperature"></div>
-            <div>14</div>
+            <div class="heightTemp"></div>
+            <div class ="temp">14</div>
           </div>
 
           <div class="temperature-for-time">
-            <div class="high-temperature"></div>
-            <div>14</div>
+            <div class="heightTemp"></div>
+            <div class ="temp">14</div>
           </div>
 
         </div>
@@ -303,59 +303,59 @@
       </div>
       <div id="dayWeather8days">
         <div class="day-weather-temperature__nextday day-weather-temperature__nextday--active ">
-          <p class="text-style-grey ">ср</p>
+          <p class="text-style-grey ">вт</p>
           <img src="images/cloudy.png " alt="Weather Picture ">
-          <p>22&deg
-            <span class="text-style-grey ">13&deg</span>
+          <p class="tempDay">22C
+            <span class="text-style-grey "></span>
+          </p>
+        </div>
+        <div class="day-weather-temperature__nextday ">
+          <p class="text-style-grey ">ср</p>
+          <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">21C
+            <span class="text-style-grey "></span>
           </p>
         </div>
         <div class="day-weather-temperature__nextday ">
           <p class="text-style-grey ">чт</p>
-          <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
-          <p>21&deg
-            <span class="text-style-grey ">11&deg</span>
+          <img src="images/partly_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">24C
+            <span class="text-style-grey "></span>
           </p>
         </div>
-        <div class="day-weather-temperature__nextday ">
+        <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">пт</p>
-          <img src="images/partly_cloudy.png " alt="Weather Picture ">
-          <p>24&deg
-            <span class="text-style-grey ">12&deg</span>
+          <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay"> 26C
+            <span class="text-style-grey "></span>
           </p>
         </div>
         <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">сб</p>
-          <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
-          <p>26&deg
-            <span class="text-style-grey ">13&deg</span>
+          <img src="images/partly_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">27C
+            <span class="text-style-grey "></span>
           </p>
         </div>
         <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">вс</p>
           <img src="images/partly_cloudy.png " alt="Weather Picture ">
-          <p>27&deg
-            <span class="text-style-grey ">14&deg</span>
+          <p class="tempDay">28C
+            <span class="text-style-grey "></span>
           </p>
         </div>
         <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">пн</p>
-          <img src="images/partly_cloudy.png " alt="Weather Picture ">
-          <p>28&deg
-            <span class="text-style-grey ">14&deg</span>
+          <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">28C
+            <span class="text-style-grey "></span>
           </p>
         </div>
         <div class="day-weather-temperature__nextday">
           <p class="text-style-grey ">вт</p>
-          <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
-          <p>28&deg
-            <span class="text-style-grey ">14&deg</span>
-          </p>
-        </div>
-        <div class="day-weather-temperature__nextday">
-          <p class="text-style-grey ">ср</p>
           <img src="images/partly_cloudy.png " alt="Weather Picture ">
-          <p>28&deg
-            <span class="text-style-grey ">14&deg</span>
+          <p class="tempDay">28C
+            <span class="text-style-grey "></span>
           </p>
         </div>
       </div>

@@ -94,7 +94,7 @@ body {
 	padding-right: 5px;
 }
 
-.content {
+#content, .content {
 	min-height: 500px;
 }
 
@@ -482,7 +482,7 @@ body {
 	display: flex;
 }
 
-.two-items-temperature {
+#two-items-temperature, .two-items-temperature, #two-items-temperaturePart2 {
 	display: flex;
 	justify-content: space-around;
 }
@@ -490,11 +490,18 @@ body {
 .high-temperature {
 	height: 30px;
 	background-color: #81D4FA;
+	width:16px;
+}
+.heightTemp{
+	
+	background-color: #81D4FA;
+	width:16px;
 }
 
 .low-temperature {
 	height: 15px;
 	background-color: #81D4FA;
+	width:16px;
 }
 
 .dayblock {
