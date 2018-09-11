@@ -333,7 +333,7 @@ body {
 	line-height: 25px;
 }
 
-.wind-speed-5days {
+.wind-speed-5days, #wind-speed-5days {
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;

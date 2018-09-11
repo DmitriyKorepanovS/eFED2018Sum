@@ -29,7 +29,7 @@
     <div class="header-info">
       <img class="header-image-cloudy" src="images/cloudy.png" width="40" alt="img">
       <p class="header-info__city">
-        34&degC Ижевск, Россия</p>
+        <span id ="currentCityMain">Izhevsk</span></p>
       <form id="header-findform">
         <input id="findCityInput" type="search" name="q" placeholder="Поиск">
       </form>
@@ -42,7 +42,7 @@
         <div class="btnPrevious"><img class="btnPrevious" src="images/buttonLeft.svg" alt="W_Pic"></div>
         <div class="time-of-day-temperature activex">
 
-          <div class="day-of-week">Пт, 18 мая</div>
+          <div class="day-of-week">Вт, 11 сентября</div>
           <div class="time-of-day">
             <span class="text-size-small">Ночь</span>
             <img src="images/Cloudy_Weather.png" width="24" alt="W_Pic">
@@ -61,16 +61,16 @@
           </div>
           <div class="temperature-during-the-day">
             <div class="temperature-night">+8</div>
-            <div class="temperature-morning">+16</div>
-            <div class="temperature-daytime">+21</div>
-            <div class="temperature-evening">+17</div>
+            <div class="temperature-night">+16</div>
+            <div class="temperature-night">+21</div>
+            <div class="temperature-night">+17</div>
           </div>
 
         </div>
         <div class="btnNext"><img class="btnNext" src="images/buttonRight.svg" alt="W_Pic"></div>
 
         <div class="time-of-day-temperature">
-          <div class="day-of-week">Сб, 19 мая</div>
+          <div class="day-of-week">Ср, 12 сентября</div>
           <div class="time-of-day">
             <span class="text-size-small">Ночь</span>
             <img src="images/Cloudy_Weather.png" width="24" alt="W_Pic">
@@ -89,13 +89,13 @@
           </div>
           <div class="temperature-during-the-day">
             <div class="temperature-night">+8</div>
-            <div class="temperature-morning">+16</div>
-            <div class="temperature-daytime">+21</div>
-            <div class="temperature-evening">+17</div>
+            <div class="temperature-night">+16</div>
+            <div class="temperature-night">+21</div>
+            <div class="temperature-night">+17</div>
           </div>
         </div>
         <div class="time-of-day-temperature">
-          <div class="day-of-week">Вс, 20 мая</div>
+          <div class="day-of-week">Чт, 13 сентября</div>
           <div class="time-of-day">
             <span class="text-size-small">Ночь</span>
             <img src="images/Cloudy_Weather.png" width="24" alt="W_Pic">
@@ -114,13 +114,13 @@
           </div>
           <div class="temperature-during-the-day">
             <div class="temperature-night">+8</div>
-            <div class="temperature-morning">+16</div>
-            <div class="temperature-daytime">+21</div>
-            <div class="temperature-evening">+17</div>
+            <div class="temperature-night">+16</div>
+            <div class="temperature-night">+21</div>
+            <div class="temperature-night">+17</div>
           </div>
         </div>
         <div class="time-of-day-temperature">
-          <div class="day-of-week">Пн, 21 мая</div>
+          <div class="day-of-week">Пт, 14 сентября</div>
           <div class="time-of-day">
             <span class="text-size-small">Ночь</span>
             <img src="images/Cloudy_Weather.png" width="24" alt="W_Pic">
@@ -139,13 +139,13 @@
           </div>
           <div class="temperature-during-the-day">
             <div class="temperature-night">+8</div>
-            <div class="temperature-morning">+16</div>
-            <div class="temperature-daytime">+21</div>
-            <div class="temperature-evening">+17</div>
+            <div class="temperature-night">+16</div>
+            <div class="temperature-night">+21</div>
+            <div class="temperature-night">+17</div>
           </div>
         </div>
         <div class="time-of-day-temperature">
-          <div class="day-of-week">Вт, 22 мая</div>
+          <div class="day-of-week">Сб, 15 сентября</div>
           <div class="time-of-day">
             <span class="text-size-small">Ночь</span>
             <img src="images/Cloudy_Weather.png" width="24" alt="W_Pic">
@@ -164,9 +164,9 @@
           </div>
           <div class="temperature-during-the-day">
             <div class="temperature-night">+8</div>
-            <div class="temperature-morning">+16</div>
-            <div class="temperature-daytime">+21</div>
-            <div class="temperature-evening">+17</div>
+            <div class="temperature-night">+16</div>
+            <div class="temperature-night">+21</div>
+            <div class="temperature-night">+17</div>
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@
       <div class="weathertable-max-wind-speed">
         <span>Максимальная скорость ветра, м/с</span>
       </div>
-      <div class="wind-speed-5days">
+      <div id="wind-speed-5days">
 
         <div class="dayblock">
           <div class="day">ПТ, 18 мая</div>
@@ -345,7 +345,7 @@
     2018 &copy copyright
   </footer>
   <script src="js/weather-details.js"></script>
-  <script src="js/serverdata.js"></script>
+  
 </body>
 
 </html>

@@ -95,3 +95,68 @@ function showButton(position) {
   }
   elementButtonDayOfWeek[position].classList.add(classForChange);
 }
+
+var findCityInput = document.getElementById('findCityInput');
+findCityInput.addEventListener("change", changeCity);
+
+document.getElementById('header-findform').addEventListener('submit', function (event) {
+  event.preventDefault();
+});
+
+function changeCity() {
+
+
+  var serchRequest = findCityInput.value;
+  var fiveDaysInfo = `http://api.openweathermap.org/data/2.5/forecast?q=${serchRequest}&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
+  renderCity(serchRequest);
+  serchRequest = `http://api.openweathermap.org/data/2.5/weather?q=${serchRequest}&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
+  loadArray(transformFiveDays, fiveDaysInfo)
+
+}
+
+function renderCity(renderData) {
+
+  var currentCityMain = document.getElementById('currentCityMain');
+  currentCityMain.textContent = renderData;
+}
+
+function loadArray(callback, city) {
+  var xhr = new XMLHttpRequest();
+
+  xhr.open('GET', city, true);
+  xhr.send();
+
+  xhr.onreadystatechange = function () {
+
+    if (xhr.readyState != 4) return;
+
+    if (xhr.status != 200) {
+
+      console.log('Ошибка');
+    } else {
+      callback(xhr.responseText);
+    }
+  }
+
+}
+
+function renderFiveDays(renderData) {
+
+  var arrayProp = document.getElementById('weathertable-5days');
+  var prop = arrayProp.querySelectorAll('.temperature-night');
+  var arrayWind = document.getElementById('wind-speed-5days');
+  var propWind = arrayWind.querySelectorAll('.wind-value');
+  for (var i = 0; i < 20; i++) {
+    prop[i].textContent = Math.round(renderData.temp[i + 1].main.temp);
+    propWind[i].textContent = Math.round(renderData.temp[i + 1].wind.speed);
+  }
+}
+
+function transformFiveDays(str) {
+  var parsedArray = JSON.parse(str);
+  var renderData = {
+    temp: parsedArray.list
+  };
+
+  renderFiveDays(renderData);
+}
