@@ -9,13 +9,13 @@ dayOfWeek.textContent = getNamesDays(nowDate);
 
 
 function transform(str) {
-  var parsedArray = JSON.parse(str)
-  console.log(parsedArray)
+ 
+ // console.log(parsedArray)
 
   var renderData = {
-    temp: parsedArray.main.temp,
-    humidity: parsedArray.main.humidity,
-    wind: parsedArray.wind.speed
+    temp: str.main.temp,
+    humidity: str.main.humidity,
+    wind: str.wind.speed
   };
 
   render(renderData);
@@ -32,10 +32,10 @@ function render(renderData) {
 }
 
 function transformFiveDays(str) {
-  var parsedArray = JSON.parse(str);
-  console.log(parsedArray)
+ 
+  //console.log(parsedArray)
   var renderData = {
-    temp: parsedArray.list
+    temp: str.list
   };
 
   renderFiveDays(renderData);
@@ -44,35 +44,35 @@ function transformFiveDays(str) {
 function renderFiveDays(renderData) {
 
   var arrayProp = document.getElementById('two-items-temperature');
-  var prop= arrayProp.querySelectorAll('.temp');
+  var prop = arrayProp.querySelectorAll('.temp');
   var height = arrayProp.querySelectorAll('.heightTemp');
- 
+
   var arrayPropPart2 = document.getElementById('two-items-temperaturePart2');
-  var propPart2= arrayPropPart2.querySelectorAll('.temp');
+  var propPart2 = arrayPropPart2.querySelectorAll('.temp');
   var heightPart2 = arrayPropPart2.querySelectorAll('.heightTemp');
 
   for (var i = 0; i < 4; i++) {
-    prop[i].textContent =Math.round( renderData.temp[i].main.temp);
-    height[i].style.height=Math.round( renderData.temp[i].main.temp)+"px";
-   }
-   for (var i = 0; i < 4; i++) {
-    propPart2[i].textContent =Math.round( renderData.temp[i+4].main.temp);
-    heightPart2[i].style.height=Math.round( renderData.temp[i+4].main.temp)+"px";
-   }
+    prop[i].textContent = Math.round(renderData.temp[i].main.temp);
+    height[i].style.height = Math.round(renderData.temp[i].main.temp) + "px";
+  }
+  for (var i = 0; i < 4; i++) {
+    propPart2[i].textContent = Math.round(renderData.temp[i + 4].main.temp);
+    heightPart2[i].style.height = Math.round(renderData.temp[i + 4].main.temp) + "px";
+  }
 
   var temperature8days = document.getElementById('dayWeather8days');
   var dayWeather = temperature8days.querySelectorAll('.tempDay');
 
-for (var i = 0; i < 8; i++) {
-  dayWeather[i].textContent =Math.round( renderData.temp[i*4].main.temp)+'C';
- }
+  for (var i = 0; i < 8; i++) {
+    dayWeather[i].textContent = Math.round(renderData.temp[i * 4].main.temp) + 'C';
+  }
 
 }
 
 function transformPollution(str) {
-  var parsedArray = JSON.parse(str)
+ 
   var renderData = {
-    data: parsedArray.data[36].value
+    data: str.data[36].value
   };
 
   renderPollution(renderData);
@@ -90,23 +90,22 @@ function renderCity(renderData) {
   currentCityMain.textContent = renderData;
 }
 
+
+
 function loadArray(callback, city) {
-  var xhr = new XMLHttpRequest();
+  fetch(city)
+    .then(function (response) {
+      return Promise.all([response.status, response.json()])
+    })
+    .then(function (result) {
+      if (result[0] != 200) {
 
-  xhr.open('GET', city, true);
-  xhr.send();
-
-  xhr.onreadystatechange = function () {
-
-    if (xhr.readyState != 4) return;
-
-    if (xhr.status != 200) {
-
-      console.log('Ошибка');
-    } else {
-      callback(xhr.responseText);
+        console.log('Ошибка');
+      } else {
+        callback(result[1]);
+      }
     }
-  }
+  ) .catch (function (error){alert('Ошибка') })
 
 }
 var city = `http://api.openweathermap.org/data/2.5/weather?q=Izhevsk&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
@@ -131,6 +130,7 @@ function changeCity() {
   loadArray(transform, serchRequest);
   loadArray(transformFiveDays, fiveDaysInfo)
   loadArray(transformPollution, pollution)
+
 }
 
 document.getElementById('header-findform').addEventListener('submit', function (event) {
