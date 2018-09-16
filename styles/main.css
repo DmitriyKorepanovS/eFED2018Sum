@@ -15,7 +15,8 @@ body {
 	color: white;
 }
 
-.find-city-input {
+.find-city-input,
+#findCityInput {
 	background-color: #E1F5FE;
 	display: inline-block;
 	width: 200px;
@@ -31,7 +32,7 @@ body {
 	position: relative;
 }
 
-.text-style-big-temperature {
+#text-style-big-temperature {
 	vertical-align: top;
 	font-size: 40px;
 	padding-left: 20px;
@@ -73,7 +74,7 @@ body {
 	padding-left: 50px;
 }
 
-.header-findform {
+#header-findform {
 	height: 23px;
 	width: 230px;
 	border: 1px solid;
@@ -85,7 +86,7 @@ body {
 	transform: translateY(-50%);
 }
 
-.header-findform::before {
+#header-findform::before {
 	content: url(../images/find.png);
 	position: relative;
 	top: 3px;
@@ -93,7 +94,7 @@ body {
 	padding-right: 5px;
 }
 
-.content {
+#content, .content {
 	min-height: 500px;
 }
 
@@ -136,10 +137,11 @@ body {
 	text-align: center;
 	padding-left: 15px;
 	padding-right: 15px;
-	display:none;
+	display: none;
 }
-.activeSection{
-	display:flex;
+
+.activeSection {
+	display: flex;
 }
 
 .probability-of-precipitation__level-probabolity {
@@ -201,7 +203,7 @@ body {
 	flex-grow: 1;
 }
 
-.day-weather-temperature-8days {
+#dayWeather8days {
 	display: flex;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -227,7 +229,6 @@ body {
 }
 
 /* Page - 5days.html */
-
 .header-info__city {
 	display: inline-block;
 	margin-left: 50px;
@@ -332,7 +333,7 @@ body {
 	line-height: 25px;
 }
 
-.wind-speed-5days {
+.wind-speed-5days, #wind-speed-5days {
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
@@ -481,7 +482,7 @@ body {
 	display: flex;
 }
 
-.two-items-temperature {
+#two-items-temperature, .two-items-temperature, #two-items-temperaturePart2 {
 	display: flex;
 	justify-content: space-around;
 }
@@ -489,12 +490,20 @@ body {
 .high-temperature {
 	height: 30px;
 	background-color: #81D4FA;
+	width:16px;
+}
+.heightTemp{
+	
+	background-color: #81D4FA;
+	width:16px;
 }
 
 .low-temperature {
 	height: 15px;
 	background-color: #81D4FA;
+	width:16px;
 }
+
 .dayblock {
 	display: flex;
 	flex-direction: column;
@@ -507,6 +516,7 @@ body {
 	font-size: 16px;
 	text-align: center;
 }
+
 #btn2 {
 	display: none;
 }
@@ -522,27 +532,35 @@ body {
 .btnNext {
 	display: none;
 }
-/* Page - hystory.html */
 
+/* Page - hystory.html */
 .hystory-table {
 	font-size: 10px;
 	text-align: center;
 	margin-top: 50px;
 }
 
-.row1 {
+.row1,
+#averageMin,
+#recordMin {
 	display: flex;
 }
 
-.row1 .cell:nth-child(odd) {
+.row1 .cell:nth-child(odd),
+#averageMin .cell:nth-child(odd),
+#recordMin .cell:nth-child(odd) {
 	background: #81D4FA;
 }
 
-.row2 {
+.row2,
+#averageMax,
+#recordMax {
 	display: flex;
 }
 
-.row2 .cell:nth-child(even) {
+.row2 .cell:nth-child(even),
+#averageMax .cell:nth-child(even),
+#recordMax .cell:nth-child(even) {
 	display: flex;
 	background: #81D4FA;
 }
@@ -556,68 +574,85 @@ body {
 	align-items: center;
 }
 
-.hystory-table-vertical {
-	display: none;
-	font-size: 10px;
-	text-align: center;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
 @media (max-width: 768px) {
-	.day-weather-temperature-8days {
+	#dayWeather8days {
 		display: flex;
 		flex-flow: column;
 	}
+
 	.day-weather-temperature__nextday {
 		display: flex;
 		justify-content: space-around;
 	}
-	.header-findform {
+
+	#header-findform {
 		position: static;
 		margin-left: 40px;
 	}
+
 	.probability-of-precipitation {
 		padding: 0;
 		font-size: 14px;
 	}
+
 	.header-info__pollution {
 		padding-left: 40px;
 	}
+
 	#button-temperature-probability-wind {
 		flex-direction: column;
 	}
+
 	.buttonrow-button-noactive {
 		margin-bottom: 5px;
 	}
+
 	.textspace {
 		margin-left: 10px;
 	}
+
 	.header-image-cloudy {
 		top: 25%;
 	}
+
 	.weathertable {
 		padding: 5px;
 	}
+
 	.curentday-sun-day-and-moon {
 		margin-left: 5px;
 		margin-right: 5px;
 	}
+
 	.Sun-and-moon {
 		margin-left: 5px;
 	}
+
 	.Sun-and-moon__moon-info {
 		padding-left: 5px;
 	}
+
 	.day {
 		display: block;
 	}
+
 	/* Page - hystory.html */
 	.hystory-table {
-		display: none;
+		display: flex;
 	}
-	.hystory-table-vertical {
-		display: block;
+
+	.row1,
+	#averageMin,
+	#recordMin {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.row2,
+	#averageMax,
+	#recordMax {
+		flex-direction: column;
+		width: 100%;
 	}
 }
 
@@ -625,15 +660,19 @@ body {
 	.buttonrow-button-noactive {
 		font-size: 11px;
 	}
+
 	.today-weather-information__city-temperature {
 		font-size: 16px;
 	}
+
 	.today-weather-information__precipitation-humidity-wind {
 		font-size: 16px;
 	}
+
 	.main-menu {
 		font-size: 14px;
 	}
+
 	.time-of-day-temperature {
 		display: none;
 		margin-right: 24px;
@@ -642,33 +681,35 @@ body {
 	.activex {
 		display: block;
 	}
+
 	.btnPrevious {
-		display:block;
-		height:102px;
-		width:24px;
+		display: block;
+		height: 102px;
+		width: 24px;
 	}
-	.btnNext{
-		display:block;
+
+	.btnNext {
+		display: block;
 		position: absolute;
 		right: 0px;
-		height:102px;
-		width:26px;
+		height: 102px;
+		width: 26px;
 	}
-	#buttonForDay{
-		display:flex;
+
+	#buttonForDay {
+		display: flex;
 		align-items: center;
 		justify-content: space-around;
-
 	}
+
 	.buttonDayOfWeek {
 		display: flex;
 		border: 1px solid;
 		margin-top: 5px;
 		margin-bottom: 5px;
-
-	}
-	.activeDay{
-		background:#81D4FA;
 	}
 
+	.activeDay {
+		background: #81D4FA;
+	}
 }
