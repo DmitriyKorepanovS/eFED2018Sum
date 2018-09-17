@@ -12,3 +12,16 @@ var obj = {
   currentValue: 3
 }
 console.log(sumWith.call(obj, number))
+
+////////////additionalTask
+
+currentValue = -1;
+
+function additionalSum() {
+  return sumWith(2);
+}
+
+console.log(additionalSum())
+console.log(additionalSum())
+console.log(additionalSum())
+console.log(additionalSum())
