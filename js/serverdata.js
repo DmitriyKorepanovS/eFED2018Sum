@@ -129,13 +129,13 @@ function Fetcher() {
 function FiveDayFetcher() {
   Fetcher.apply(this, arguments)
   const parentFetcher = this.fetchData;
-  this.fetchData = function (url, success, failure) {
+  this.fetchData = (url, success, failure) => {
     parentFetcher.apply(this, [url, success, failure]);
   }
 }
 
 class Transformer {
-  cpnstructor() {
+  cnstructor() {
     this.transform = function () {}
   }
 }
@@ -169,9 +169,9 @@ class CurrentDay_Transformer extends Transformer {
 }
 
 function Renderer() {
-  this.renderHeader = function () {}
-  this.renderFooter = function () {}
-  this.renderBody = function () {}
+  this.renderHeader = () => {}
+  this.renderFooter = () => {}
+  this.renderBody =  () => {}
 }
 
 function FiveDayRenderer() {
@@ -191,11 +191,11 @@ function CurrentDay_Renderer() {
 ///// Default
 function init() {
   const FIVE_DAY_URL = `http://api.openweathermap.org/data/2.5/forecast?q=Izhevsk&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
-  var fiveDayTransformer = new FiveDayTransformer()
-  var fetcher = new FiveDayFetcher()
+  let fiveDayTransformer = new FiveDayTransformer()
+  let fetcher = new FiveDayFetcher()
   fetcher.fetchData(FIVE_DAY_URL, response => {
-    var transformFive = fiveDayTransformer.transform(response)
-    var renderer = new FiveDayRenderer()
+    let transformFive = fiveDayTransformer.transform(response)
+    let renderer = new FiveDayRenderer()
     renderer.renderBody(transformFive)
 
   }, () => {
@@ -203,11 +203,11 @@ function init() {
   })
 
   const POLLUTION = `http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=e2c078e26648e8e09b6e90e982007c80`;
-  var headerPollution_Transformer = new HeaderPollution_Transformer()
-  var fetcher2 = new FiveDayFetcher()
+  let headerPollution_Transformer = new HeaderPollution_Transformer()
+  let fetcher2 = new FiveDayFetcher()
   fetcher2.fetchData(POLLUTION, response => {
-    var result = headerPollution_Transformer.transform(response)
-    var renderer2 = new PollutionRenderer()
+    let result = headerPollution_Transformer.transform(response)
+    let renderer2 = new PollutionRenderer()
     renderer2.renderHeader(result)
 
   }, () => {
@@ -215,11 +215,11 @@ function init() {
   })
 
   const FIVE_DAYS_INFO2 = `http://api.openweathermap.org/data/2.5/weather?q=Izhevsk&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
-  var currentDay_Transformer = new CurrentDay_Transformer()
-  var fetcher3 = new FiveDayFetcher()
+  let currentDay_Transformer = new CurrentDay_Transformer()
+  let fetcher3 = new FiveDayFetcher()
   fetcher3.fetchData(FIVE_DAYS_INFO2, response => {
-    var result = currentDay_Transformer.transform(response)
-    var renderer3 = new CurrentDay_Renderer()
+    let result = currentDay_Transformer.transform(response)
+    let renderer3 = new CurrentDay_Renderer()
     renderer3.renderBody(result)
 
   }, () => {
@@ -238,11 +238,11 @@ function changeCity() {
 
   let serchRequest = findCityInput.value;
   let fiveDaysInfo = `http://api.openweathermap.org/data/2.5/forecast?q=${serchRequest}&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
-  var fiveDayTransformer = new FiveDayTransformer()
-  var fetcher = new FiveDayFetcher()
+  let fiveDayTransformer = new FiveDayTransformer()
+  let fetcher = new FiveDayFetcher()
   fetcher.fetchData(fiveDaysInfo, response => {
-    var result = fiveDayTransformer.transform(response)
-    var renderer = new FiveDayRenderer()
+    let result = fiveDayTransformer.transform(response)
+    let renderer = new FiveDayRenderer()
     renderer.renderBody(result)
 
     renderCity(serchRequest);
@@ -251,11 +251,11 @@ function changeCity() {
   })
 
   let pollution = `http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=e2c078e26648e8e09b6e90e982007c80`;
-  var headerPollution_Transformer = new HeaderPollution_Transformer()
-  var fetcher2 = new FiveDayFetcher()
+  let headerPollution_Transformer = new HeaderPollution_Transformer()
+  let fetcher2 = new FiveDayFetcher()
   fetcher2.fetchData(pollution, response => {
-    var result = headerPollution_Transformer.transform(response)
-    var renderer2 = new PollutionRenderer()
+    let result = headerPollution_Transformer.transform(response)
+    let renderer2 = new PollutionRenderer()
     renderer2.renderBody(result)
 
   }, () => {
@@ -263,11 +263,11 @@ function changeCity() {
   })
 
   let fiveDaysInfo2 = `http://api.openweathermap.org/data/2.5/weather?q=${serchRequest}&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
-  var currentDay_Transformer = new CurrentDay_Transformer()
-  var fetcher3 = new FiveDayFetcher()
+  let currentDay_Transformer = new CurrentDay_Transformer()
+  let fetcher3 = new FiveDayFetcher()
   fetcher3.fetchData(fiveDaysInfo2, response => {
-    var result = currentDay_Transformer.transform(response)
-    var renderer3 = new CurrentDay_Renderer()
+    let result = currentDay_Transformer.transform(response)
+    let renderer3 = new CurrentDay_Renderer()
     renderer3.renderBody(result)
 
   }, () => {

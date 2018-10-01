@@ -361,7 +361,7 @@ body {
 	line-height: 25px;
 }
 
-.weathertable-rainfall-5days {
+ #weathertable-rainfall-5days {
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 14px;

@@ -1,6 +1,6 @@
-var fiveDaysContainer = document.getElementById('weathertable-5days');
-var elements = document.querySelectorAll('.time-of-day-temperature');
-var classForDay = 'activex';
+const fiveDaysContainer = document.getElementById('weathertable-5days');
+const elements = document.querySelectorAll('.time-of-day-temperature');
+const classForDay = 'activex';
 fiveDaysContainer.addEventListener("click", switchInfo);
 
 function switchInfo(event) {
@@ -13,8 +13,8 @@ function switchInfo(event) {
 }
 
 function showNext() {
-  var indexNext;
-  for (var i = 0; i < elements.length; i++) {
+  let indexNext;
+  for (let i = 0; i < elements.length; i++) {
     if (elements[i].classList.contains(classForDay)) {
       elements[i].classList.remove(classForDay)
 
@@ -32,8 +32,8 @@ function showNext() {
 }
 
 function showPrevious() {
-  var indexPrevious;
-  for (var i = 0; i < elements.length; i++) {
+  let indexPrevious;
+  for (let i = 0; i < elements.length; i++) {
 
     if (elements[i].classList.contains(classForDay)) {
       elements[i].classList.remove(classForDay)
@@ -51,15 +51,15 @@ function showPrevious() {
   showButton(indexPrevious)
 }
 
-var buttonForDay = document.getElementById('buttonForDay');
-var elementButtonDayOfWeek = document.querySelectorAll('.buttonDayOfWeek');
-var classForChange = 'activeDay';
+const buttonForDay = document.getElementById('buttonForDay');
+const elementButtonDayOfWeek = document.querySelectorAll('.buttonDayOfWeek');
+const classForChange = 'activeDay';
 
 
 buttonForDay.addEventListener("click", switchButton);
 
 function switchButton(event) {
-  var index;
+  let index;
   if (event.target.className === 'buttonDayOfWeek') {
     for (var i = 0; i < elementButtonDayOfWeek.length; i++) {
       if (elementButtonDayOfWeek[i].classList.contains(classForChange)) {
@@ -138,42 +138,48 @@ function loadArray(callback, city) {
 }
 
 function renderFiveDays(renderData) {
-console.log(renderData)
-  var arrayProp = document.getElementById('weathertable-5days');
-  var prop = arrayProp.querySelectorAll('.temperature-night');
-  var arrayWind = document.getElementById('wind-speed-5days');
-  var propWind = arrayWind.querySelectorAll('.wind-value');
-  let icon5Days = arrayProp.querySelectorAll('.icon-5-days');
-  
+ 
+  const arrayProp = document.getElementById('weathertable-5days');
+  const prop = arrayProp.querySelectorAll('.temperature-night');
+  const arrayWind = document.getElementById('wind-speed-5days');
+  const propWind = arrayWind.querySelectorAll('.wind-value');
+  const icon5Days = arrayProp.querySelectorAll('.icon-5-days');
+
+ const rainfall5days = document.getElementById('weathertable-rainfall-5days');
+ const selectValueRain = rainfall5days.querySelectorAll('.valueRain');
+// const selectStyleImage = rainfall5days.querySelectorAll('.style-image');
+
   for (var i = 0; i < 20; i++) {
     prop[i].textContent = Math.round(renderData.temp[i + 1].main.temp);
     propWind[i].textContent = Math.round(renderData.temp[i + 1].wind.speed);
 
-    let iconChange = renderData.temp[i*2].weather[0].description;
+    let iconChange = renderData.temp[i * 2].weather[0].description;
     icon5Days[i].setAttribute('src', `images/${iconChange}.png`);
 
+   selectValueRain[i].textContent = Math.round(renderData.temp[i + 1].main.temp);
+   //selectStyleImage[i].style.height = Math.round(renderData.temp[i + 4].main.temp *2) + "px";
   }
 
 
   const SHORT_NAMES_WEEK = getShortNamesDays();
   const DAYS_OF_WEEK = arrayProp.querySelectorAll('.day-of-week');
-  console.log(DAYS_OF_WEEK)
+  
 
   let nowDate = new Date();
   let start = nowDate.getDay();
   let currentdate = nowDate.getDate();
-  
+
   for (let i = 0; i < 5; i++) {
-    DAYS_OF_WEEK[i].textContent = SHORT_NAMES_WEEK[i + start]+'  ' +(currentdate+i);
+    DAYS_OF_WEEK[i].textContent = SHORT_NAMES_WEEK[i + start] + '  ' + (currentdate + i);
   }
 
   let select_currentdate = document.getElementById('currentdate');
   select_currentdate.textContent = currentdate;
-  console.log (select_currentdate)
+ 
 }
 
 function transformFiveDays(str) {
-  var renderData = {
+  let renderData = {
     temp: str.list
   };
   renderFiveDays(renderData);
