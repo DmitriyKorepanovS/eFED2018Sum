@@ -94,7 +94,8 @@ body {
 	padding-right: 5px;
 }
 
-#content, .content {
+#content,
+.content {
 	min-height: 500px;
 }
 
@@ -151,14 +152,8 @@ body {
 	flex-direction: column-reverse;
 }
 
-.low-probability {
+.probabilityValue {
 	height: 15px;
-	border-top: 2px solid #1878f0;
-	background-color: #e7f1fd;
-}
-
-.high-probability {
-	height: 30px;
 	border-top: 2px solid #1878f0;
 	background-color: #e7f1fd;
 }
@@ -209,7 +204,7 @@ body {
 	padding-right: 15px;
 }
 
-.text-style-grey {
+.text-style-dayofweek {
 	color: #1878f0;
 }
 
@@ -225,7 +220,7 @@ body {
 }
 
 .textspace {
-	margin-left: 160px;
+	margin-left: 360px;
 }
 
 /* Page - 5days.html */
@@ -319,7 +314,7 @@ body {
 	display: inline-block;
 	width: 26px;
 	height: 15px;
-	background-color: #b8ea86;
+	background-color: #81D4FA;
 	border: 1px solid;
 	margin-right: 2px;
 	font-size: 10px;
@@ -333,7 +328,8 @@ body {
 	line-height: 25px;
 }
 
-.wind-speed-5days, #wind-speed-5days {
+.wind-speed-5days,
+#wind-speed-5days {
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
@@ -478,11 +474,16 @@ body {
 	flex-direction: column-reverse;
 }
 
-.two-items {
+#precipation_part1,
+#precipation_part2 {
 	display: flex;
 }
 
-#two-items-temperature, .two-items-temperature, #two-items-temperaturePart2 {
+#two-items-temperature,
+.two-items-temperature,
+#two-items-temperaturePart2,
+#two-items-wind,
+#two-items-wind-part2 {
 	display: flex;
 	justify-content: space-around;
 }
@@ -490,18 +491,19 @@ body {
 .high-temperature {
 	height: 30px;
 	background-color: #81D4FA;
-	width:16px;
+	width: 16px;
 }
-.heightTemp{
-	
+
+.heightTemp {
+
 	background-color: #81D4FA;
-	width:16px;
+	width: 16px;
 }
 
 .low-temperature {
 	height: 15px;
 	background-color: #81D4FA;
-	width:16px;
+	width: 16px;
 }
 
 .dayblock {
@@ -531,6 +533,9 @@ body {
 
 .btnNext {
 	display: none;
+}
+#currentdate {
+	margin-left: 20px;
 }
 
 /* Page - hystory.html */
@@ -608,7 +613,7 @@ body {
 	}
 
 	.textspace {
-		margin-left: 10px;
+		margin-left: 50px;
 	}
 
 	.header-image-cloudy {

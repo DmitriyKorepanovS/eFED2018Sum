@@ -96,6 +96,7 @@ function showButton(position) {
   elementButtonDayOfWeek[position].classList.add(classForChange);
 }
 
+
 var findCityInput = document.getElementById('findCityInput');
 findCityInput.addEventListener("change", changeCity);
 
@@ -137,15 +138,38 @@ function loadArray(callback, city) {
 }
 
 function renderFiveDays(renderData) {
-
+console.log(renderData)
   var arrayProp = document.getElementById('weathertable-5days');
   var prop = arrayProp.querySelectorAll('.temperature-night');
   var arrayWind = document.getElementById('wind-speed-5days');
   var propWind = arrayWind.querySelectorAll('.wind-value');
+  let icon5Days = arrayProp.querySelectorAll('.icon-5-days');
+  
   for (var i = 0; i < 20; i++) {
     prop[i].textContent = Math.round(renderData.temp[i + 1].main.temp);
     propWind[i].textContent = Math.round(renderData.temp[i + 1].wind.speed);
+
+    let iconChange = renderData.temp[i*2].weather[0].description;
+    icon5Days[i].setAttribute('src', `images/${iconChange}.png`);
+
   }
+
+
+  const SHORT_NAMES_WEEK = getShortNamesDays();
+  const DAYS_OF_WEEK = arrayProp.querySelectorAll('.day-of-week');
+  console.log(DAYS_OF_WEEK)
+
+  let nowDate = new Date();
+  let start = nowDate.getDay();
+  let currentdate = nowDate.getDate();
+  
+  for (let i = 0; i < 5; i++) {
+    DAYS_OF_WEEK[i].textContent = SHORT_NAMES_WEEK[i + start]+'  ' +(currentdate+i);
+  }
+
+  let select_currentdate = document.getElementById('currentdate');
+  select_currentdate.textContent = currentdate;
+  console.log (select_currentdate)
 }
 
 function transformFiveDays(str) {
@@ -153,4 +177,12 @@ function transformFiveDays(str) {
     temp: str.list
   };
   renderFiveDays(renderData);
+}
+
+function getShortNamesDays() {
+  const DAYS_WK_SHORT = ['Вc', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб',
+    'Вc', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб',
+    'Вc', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'
+  ];
+  return DAYS_WK_SHORT
 }

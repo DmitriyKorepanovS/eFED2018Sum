@@ -28,7 +28,7 @@
       </ul>
     </nav>
     <div class="header-info">
-      <p class="header-info__pollution">Загрязнение воздуха:<span id ="pollution"></span></p>
+      <p class="header-info__pollution">Загрязнение воздуха:<span id="pollution"></span></p>
       <form id="header-findform">
         <input id="findCityInput" type="search" name="q" placeholder="Поиск">
       </form>
@@ -38,12 +38,13 @@
   <main id="content">
     <section class="today-weather-information">
       <div class="today-weather-information__city-temperature">
-        <p><span id="currentCityMain">Izhevsk</span></br><span id ="dayOfWeek">понедельник</span></br>облачно</p>
-        <img src="images/Sunny_Weather.png" alt="Current Weather Picture" width="80px">
+        <p><span id="currentCityMain">Izhevsk</span></br><span id="dayOfWeek">понедельник</span></br>облачно</p>
+        <img id="pictureCurrentWeather" src="images/clear sky.png" alt="Current Weather Picture" width="80px">
         <span id="text-style-big-temperature">22</span>
       </div>
       <div class="today-weather-information__precipitation-humidity-wind">
-        <p>Вероятность осадков: <span id="precipitation">22%</span> </br>Влажность:<span id="humidity">45%</span></br>Ветер: <span id="wind"></span>м/с</p>
+        <p>Вероятность осадков: <span id="precipitation">22%</span> </br>Влажность:<span id="humidity">45%</span></br>Ветер:
+          <span id="wind"></span>м/с</p>
         <div id="button-temperature-probability-wind">
           <button class="buttonrow-button-noactive buttonrow-button-active">Температура</button>
           <button class="buttonrow-button-noactive">Вероятность осадков</button>
@@ -58,23 +59,23 @@
 
           <div class="temperature-for-time">
             <div class="heightTemp"></div>
-            <div class ="temp">14</div>
+            <div class="temp">14</div>
           </div>
 
 
           <div class="temperature-for-time">
             <div class="heightTemp"></div>
-            <div class ="temp">14</div>
+            <div class="temp">14</div>
           </div>
 
           <div class="temperature-for-time">
             <div class="heightTemp"></div>
-            <div class ="temp">12</div>
+            <div class="temp">12</div>
           </div>
 
           <div class="temperature-for-time">
             <div class="heightTemp"></div>
-            <div class ="temp">12</div>
+            <div class="temp">12</div>
           </div>
 
         </div>
@@ -90,22 +91,22 @@
 
           <div class="temperature-for-time">
             <div class="heightTemp"></div>
-            <div class ="temp">15</div>
+            <div class="temp">15</div>
           </div>
 
           <div class="temperature-for-time">
             <div class="heightTemp"></div>
-            <div class ="temp">13</div>
+            <div class="temp">13</div>
           </div>
 
           <div class="temperature-for-time">
             <div class="heightTemp"></div>
-            <div class ="temp">14</div>
+            <div class="temp">14</div>
           </div>
 
           <div class="temperature-for-time">
             <div class="heightTemp"></div>
-            <div class ="temp">14</div>
+            <div class="temp">14</div>
           </div>
 
         </div>
@@ -119,47 +120,47 @@
     </section>
     <section class="probability-of-precipitation ">
       <div class="three-items">
-        <div class="two-items">
+        <div id="precipation_part1">
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability "></div>
-            <div>24%</div>
+            <div class="probabilityValue"></div>
+            <div class ="precipationValue">24%</div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
-            <div>30%</div>
+            <div class="probabilityValue"></div>
+            <div class ="precipationValue">30%</div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability "></div>
-            <div>24%</div>
+            <div class="probabilityValue"></div>
+            <div class ="precipationValue">24%</div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability ">
+            <div class="probabilityValue">
             </div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
-            <div>8%</div>
+            <div class="probabilityValue"></div>
+            <div class ="precipationValue">8%</div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
         </div>
         <div class="time-step-3-hours ">
@@ -170,48 +171,48 @@
         </div>
       </div>
       <div class="three-items ">
-        <div class="two-items ">
+        <div id="precipation_part2">
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability "></div>
-            <div>4%</div>
+            <div class="probabilityValue"></div>
+            <div class ="precipationValue">4%</div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability ">
+            <div class="probabilityValue">
             </div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
-            <div>6%</div>
+            <div class="probabilityValue"></div>
+            <div class ="precipationValue">6%</div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability "></div>
-            <div>0%</div>
+            <div class="probabilityValue"></div>
+            <div class ="precipationValue">0%</div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability ">
+            <div class="probabilityValue">
             </div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="low-probability "></div>
-            <div>1%</div>
+            <div class="probabilityValue"></div>
+            <div class ="precipationValue">1%</div>
           </div>
           <div class="probability-of-precipitation__level-probabolity ">
-            <div class="high-probability "></div>
+            <div class="probabilityValue"></div>
           </div>
         </div>
         <div class="time-step-3-hours ">
@@ -224,13 +225,13 @@
     </section>
     <section class="probability-of-precipitation ">
       <div class="three-items">
-        <div class="two-items-temperature">
+        <div id="two-items-wind">
 
           <div class="temperature-for-time">
             <div class="wind-arrow40">
               <img src="images/wind.svg" alt="wind picture">
             </div>
-            <div>14</div>
+            <div class ="windSpeed">14</div>
           </div>
 
 
@@ -238,21 +239,21 @@
             <div class="wind-arrow80">
               <img src="images/wind.svg" alt="wind picture">
             </div>
-            <div>14</div>
+            <div class ="windSpeed">14</div>
           </div>
 
           <div class="temperature-for-time">
             <div class="wind-arrow60">
               <img src="images/wind.svg" alt="wind picture">
             </div>
-            <div>12</div>
+            <div class ="windSpeed">12</div>
           </div>
 
           <div class="temperature-for-time">
             <div class="wind-arrow100">
               <img src="images/wind.svg" alt="wind picture">
             </div>
-            <div>12</div>
+            <div class ="windSpeed">12</div>
           </div>
 
         </div>
@@ -264,30 +265,30 @@
         </div>
       </div>
       <div class="three-items ">
-        <div class="two-items-temperature">
+        <div id="two-items-wind-part2">
           <div class="temperature-for-time">
             <div class="wind-arrow40">
               <img src="images/wind.svg" alt="wind picture">
             </div>
-            <div>15</div>
+            <div class ="windSpeed">15</div>
           </div>
           <div class="temperature-for-time">
             <div class="wind-arrow200">
               <img src="images/wind.svg" alt="wind picture">
             </div>
-            <div>13</div>
+            <div class ="windSpeed">13</div>
           </div>
           <div class="temperature-for-time">
             <div class="wind-arrow240">
               <img src="images/wind.svg" alt="wind picture">
             </div>
-            <div>14</div>
+            <div class ="windSpeed">14</div>
           </div>
           <div class="temperature-for-time">
             <div class="wind-arrow270">
               <img src="images/wind.svg" alt="wind picture">
             </div>
-            <div>14</div>
+            <div class ="windSpeed">14</div>
           </div>
         </div>
         <div class="time-step-3-hours ">
@@ -303,60 +304,44 @@
       </div>
       <div id="dayWeather8days">
         <div class="day-weather-temperature__nextday day-weather-temperature__nextday--active ">
-          <p class="text-style-grey ">вт</p>
-          <img src="images/cloudy.png " alt="Weather Picture ">
-          <p class="tempDay">22C
-            <span class="text-style-grey "></span>
-          </p>
+          <p class="text-style-dayofweek ">вт</p>
+          <img class="iconWeather" src="images/cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">22C</p>
         </div>
         <div class="day-weather-temperature__nextday ">
-          <p class="text-style-grey ">ср</p>
-          <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
-          <p class="tempDay">21C
-            <span class="text-style-grey "></span>
-          </p>
+          <p class="text-style-dayofweek">ср</p>
+          <img class="iconWeather" src="images/rain_s_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">21C</p>
         </div>
         <div class="day-weather-temperature__nextday ">
-          <p class="text-style-grey ">чт</p>
-          <img src="images/partly_cloudy.png " alt="Weather Picture ">
-          <p class="tempDay">24C
-            <span class="text-style-grey "></span>
-          </p>
+          <p class="text-style-dayofweek">чт</p>
+          <img class="iconWeather" src="images/partly_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">24C</p>
         </div>
         <div class="day-weather-temperature__nextday">
-          <p class="text-style-grey ">пт</p>
-          <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
-          <p class="tempDay"> 26C
-            <span class="text-style-grey "></span>
-          </p>
+          <p class="text-style-dayofweek">пт</p>
+          <img class="iconWeather" src="images/rain_s_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay"> 26C</p>
         </div>
         <div class="day-weather-temperature__nextday">
-          <p class="text-style-grey ">сб</p>
-          <img src="images/partly_cloudy.png " alt="Weather Picture ">
-          <p class="tempDay">27C
-            <span class="text-style-grey "></span>
-          </p>
+          <p class="text-style-dayofweek">сб</p>
+          <img class="iconWeather" src="images/partly_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">27C</p>
         </div>
         <div class="day-weather-temperature__nextday">
-          <p class="text-style-grey ">вс</p>
-          <img src="images/partly_cloudy.png " alt="Weather Picture ">
-          <p class="tempDay">28C
-            <span class="text-style-grey "></span>
-          </p>
+          <p class="text-style-dayofweek">вс</p>
+          <img class="iconWeather" src="images/partly_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">28C</p>
         </div>
         <div class="day-weather-temperature__nextday">
-          <p class="text-style-grey ">пн</p>
-          <img src="images/rain_s_cloudy.png " alt="Weather Picture ">
-          <p class="tempDay">28C
-            <span class="text-style-grey "></span>
-          </p>
+          <p class="text-style-dayofweek">пн</p>
+          <img class="iconWeather" src="images/rain_s_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">28C</p>
         </div>
         <div class="day-weather-temperature__nextday">
-          <p class="text-style-grey ">вт</p>
-          <img src="images/partly_cloudy.png " alt="Weather Picture ">
-          <p class="tempDay">28C
-            <span class="text-style-grey "></span>
-          </p>
+          <p class="text-style-dayofweek">вт</p>
+          <img class="iconWeather" src="images/partly_cloudy.png " alt="Weather Picture ">
+          <p class="tempDay">28C</p>
         </div>
       </div>
     </section>
