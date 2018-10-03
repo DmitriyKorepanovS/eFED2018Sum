@@ -8,32 +8,34 @@ class Presenter {
     }
 
     renderFiveDays(renderData) {
-        const countSelectedElement = 4;
-        const countSelectedElement2 = 12;
-        const countSelectedElement3 = 8;
+        const obj = {
+            countSelectedElement: 4,
+            countSelectedElement2: 12,
+            countSelectedElement3: 8
+        }
 
-        for (let i = 0; i < countSelectedElement; i++) {
+        for (let i = 0; i < obj.countSelectedElement; i++) {
             document.querySelectorAll('.temp1')[i].textContent = Math.round(renderData.temp[i].main.temp);
-            document.querySelectorAll('.heightTemp1')[i].style.height = Math.round(renderData.temp[i].main.temp) + "px";
+            document.querySelectorAll('.heightTemp1')[i].style.height = `${Math.round(renderData.temp[i].main.temp)}px`;
             document.querySelectorAll('.temp2')[i].textContent = Math.round(renderData.temp[i + 4].main.temp);
-            document.querySelectorAll('.heightTemp2')[i].style.height = Math.round(renderData.temp[i + 4].main.temp) + "px";
+            document.querySelectorAll('.heightTemp2')[i].style.height = `${Math.round(renderData.temp[i + 4].main.temp)}px`;
             document.querySelectorAll('.windSpeed1')[i].textContent = Math.round(renderData.temp[i].wind.speed);
             document.querySelectorAll('.windSpeed2')[i].textContent = Math.round(renderData.temp[i + 4].wind.speed);
             document.querySelectorAll('.precipationValue1')[i].textContent = Math.round(renderData.temp[i].main.humidity - 16);
             document.querySelectorAll('.precipationValue2')[i].textContent = Math.round(renderData.temp[i + 12].main.humidity - 16);
         }
 
-        for (let i = 0; i < countSelectedElement2; i++) {
-            document.querySelectorAll('.probabilityValue1')[i].style.height = Math.round(renderData.temp[i].main.humidity / 4) + "px";
-            document.querySelectorAll('.probabilityValue2')[i].style.height = Math.round(renderData.temp[i + 12].main.humidity / 4) + "px";
+        for (let i = 0; i < obj.countSelectedElement2; i++) {
+            document.querySelectorAll('.probabilityValue1')[i].style.height = `${Math.round(renderData.temp[i].main.humidity / 4)}px`;
+            document.querySelectorAll('.probabilityValue2')[i].style.height = `${Math.round(renderData.temp[i + 12].main.humidity / 4)}px`;
         }
 
-        const SHORT_NAMES_WEEK = getShortNamesDays();
+        const SHORT_NAMES_WEEK = this.getShortNamesDays();
         let nowDate = new Date();
         let start = nowDate.getDay();
 
-        for (let i = 0; i < countSelectedElement3; i++) {
-            document.querySelectorAll('.tempDay')[i].textContent = Math.round(renderData.temp[i * 4].main.temp) + 'C';
+        for (let i = 0; i < obj.countSelectedElement3; i++) {
+            document.querySelectorAll('.tempDay')[i].textContent = `${Math.round(renderData.temp[i * 4].main.temp)}C`;
             document.querySelectorAll('.text-style-dayofweek')[i].textContent = SHORT_NAMES_WEEK[i + start];
 
             let iconChange = renderData.temp[i * 4].weather[0].description;
@@ -44,9 +46,9 @@ class Presenter {
     }
 
     renderCurrentDay(renderData) {
-        document.getElementById('humidity').textContent = renderData.humidity + `%`;
-        document.getElementById('precipitation').textContent = renderData.humidity - 16 + `%`
-        document.getElementById('text-style-big-temperature').textContent = Math.round(renderData.temp) + `С`;
+        document.getElementById('humidity').textContent = `${renderData.humidity}%`;
+        document.getElementById('precipitation').textContent = `${renderData.humidity - 16}%`;
+        document.getElementById('text-style-big-temperature').textContent = `${Math.round(renderData.temp)}С`;
         document.getElementById('wind').textContent = renderData.wind;
 
         let iconWeather = renderData.icon;
@@ -64,8 +66,7 @@ class Presenter {
     getData(url) {
         //console.log(url)
         return fetch(url).then(result => {
-            console.log(result) 
-            result.json();
+            return result.json();
         });
     }
 
@@ -100,7 +101,6 @@ class Presenter {
 
     getPoluutionWeather() {
         this.getData(this.options.POLLUTION).then(res => {
-            console.log (res)
             let result = this.pollutionFormatter(res);
             this.renderHeaderPollution(result);
         })
@@ -116,8 +116,26 @@ class Presenter {
     init() {
         document.getElementById('header-findform').addEventListener('submit', event => {
             event.preventDefault();
+
+            document.getElementById('findCityInput').addEventListener("change", changeCity)
         });
     }
+
+    getNamesDays(date) {
+        const NAMEDAYS = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+        return NAMEDAYS[date.getDay()];
+    }
+
+    getShortNamesDays() {
+        return ['Вc', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вc', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вc', 'Пн'];
+    }
+
+    renderDayOfWeek() {
+        let nowDate = new Date();
+        document.getElementById('dayOfWeek').textContent = this.getNamesDays(nowDate);
+    }
+
+    refreshData(inputTest) {}
 
 };
 
@@ -125,5 +143,6 @@ class Presenter {
 const presenter = new Presenter();
 presenter.init();
 presenter.getPoluutionWeather();
-// presenter.getCurrentWeather();
-// presenter.getFiveDaysWeather();
+presenter.getCurrentWeather();
+presenter.getFiveDaysWeather();
+presenter.renderDayOfWeek()
