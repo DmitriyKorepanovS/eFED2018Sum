@@ -18,35 +18,52 @@ function renderFiveDays(renderData) {
     countSelectedElement2: 12,
     countSelectedElement3: 8
   }
+
+  const selector = {
+    temp1: document.querySelectorAll('.temp1'),
+    heightTemp1: document.querySelectorAll('.heightTemp1'),
+    temp2: document.querySelectorAll('.temp2'),
+    heightTemp2: document.querySelectorAll('.heightTemp2'),
+    windSpeed1: document.querySelectorAll('.windSpeed1'),
+    windSpeed2: document.querySelectorAll('.windSpeed2'),
+    precipationValue1: document.querySelectorAll('.precipationValue1'),
+    precipationValue2: document.querySelectorAll('.precipationValue2'),
+    probabilityValue1: document.querySelectorAll('.probabilityValue1'),
+    probabilityValue2: document.querySelectorAll('.probabilityValue2'),
+    tempDay: document.querySelectorAll('.tempDay'),
+    dayofweek: document.querySelectorAll('.text-style-dayofweek'),
+    iconWeather: document.querySelectorAll('.iconWeather'),
+    windArrow: document.querySelectorAll('.wind-arrow')
+  }
   
   for (let i = 0; i < obj.countSelectedElement; i++) {
-    document.querySelectorAll('.temp1')[i].textContent = Math.round(renderData.temp[i].main.temp);
-    document.querySelectorAll('.heightTemp1')[i].style.height = `${Math.round(renderData.temp[i].main.temp)}px`;
-    document.querySelectorAll('.temp2')[i].textContent = Math.round(renderData.temp[i + 4].main.temp);
-    document.querySelectorAll('.heightTemp2')[i].style.height = `${Math.round(renderData.temp[i + 4].main.temp)}px`;
-    document.querySelectorAll('.windSpeed1')[i].textContent = Math.round(renderData.temp[i].wind.speed);
-    document.querySelectorAll('.windSpeed2')[i].textContent = Math.round(renderData.temp[i + 4].wind.speed);
-    document.querySelectorAll('.precipationValue1')[i].textContent = Math.round(renderData.temp[i].main.humidity - 16);
-    document.querySelectorAll('.precipationValue2')[i].textContent = Math.round(renderData.temp[i + 12].main.humidity - 16);
+    selector.temp1[i].textContent = Math.round(renderData.temp[i].main.temp);
+    selector.heightTemp1[i].style.height = `${Math.round(renderData.temp[i].main.temp)}px`;
+    selector.temp2[i].textContent = Math.round(renderData.temp[i + 4].main.temp);
+    selector.heightTemp2[i].style.height = `${Math.round(renderData.temp[i + 4].main.temp)}px`;
+    selector.windSpeed1[i].textContent = Math.round(renderData.temp[i].wind.speed);
+    selector.windSpeed2[i].textContent = Math.round(renderData.temp[i + 4].wind.speed);
+    selector.precipationValue1[i].textContent = Math.round(renderData.temp[i].main.humidity - 16);
+    selector.precipationValue2[i].textContent = Math.round(renderData.temp[i + 12].main.humidity - 16);
   }
 
   for (let i = 0; i < obj.countSelectedElement2; i++) {
-    document.querySelectorAll('.probabilityValue1')[i].style.height = `${Math.round(renderData.temp[i].main.humidity / 4)}px`;
-    document.querySelectorAll('.probabilityValue2')[i].style.height = `${Math.round(renderData.temp[i + 12].main.humidity / 4)}px`;
+    selector.probabilityValue1[i].style.height = `${Math.round(renderData.temp[i].main.humidity / 4)}px`;
+    selector.probabilityValue2[i].style.height = `${Math.round(renderData.temp[i + 12].main.humidity / 4)}px`;
   }
 
-  const SHORT_NAMES_WEEK = getShortNamesDays();
+  const shortNameWeek = getShortNamesDays();
   let nowDate = new Date();
   let start = nowDate.getDay();
 
   for (let i = 0; i < obj.countSelectedElement3; i++) {
-    document.querySelectorAll('.tempDay')[i].textContent = `${Math.round(renderData.temp[i * 4].main.temp)}C`;
-    document.querySelectorAll('.text-style-dayofweek')[i].textContent = SHORT_NAMES_WEEK[i + start];
+    selector.tempDay[i].textContent = `${Math.round(renderData.temp[i * 4].main.temp)}C`;
+    selector.dayofweek[i].textContent = shortNameWeek[i + start];
 
     let iconChange = renderData.temp[i * 4].weather[0].description;
-    document.querySelectorAll('.iconWeather')[i].setAttribute('src', `images/${iconChange}.png`)
+    selector.iconWeather[i].setAttribute('src', `images/${iconChange}.png`)
     let deg = renderData.temp[i].wind.deg;
-    document.querySelectorAll('.wind-arrow')[i].setAttribute('style', `transform: rotate(${deg}deg)`);
+    selector.windArrow[i].setAttribute('style', `transform: rotate(${deg}deg)`);
   }
 }
 
