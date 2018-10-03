@@ -1,228 +1,129 @@
-var nowDate = new Date();
-var dayOfWeek = document.getElementById('dayOfWeek');
+class Presenter {
+    constructor() {
+        this.options = {
+            FIVE_DAY_URL: `http://api.openweathermap.org/data/2.5/forecast?q=Izhevsk&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`,
+            POLLUTION: `http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=e2c078e26648e8e09b6e90e982007c80`,
+            FIVE_DAYS_INFO2: `http://api.openweathermap.org/data/2.5/weather?q=Izhevsk&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`
+        };
+    }
 
-function getNamesDays(date) {
-  var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-  return days[date.getDay()];
-}
-dayOfWeek.textContent = getNamesDays(nowDate);
+    renderFiveDays(renderData) {
+        const countSelectedElement = 4;
+        const countSelectedElement2 = 12;
+        const countSelectedElement3 = 8;
 
-
-function renderFiveDays(renderData) {
-
-  var arrayProp = document.getElementById('two-items-temperature');
-  var prop = arrayProp.querySelectorAll('.temp');
-  var height = arrayProp.querySelectorAll('.heightTemp');
-
-  var arrayPropPart2 = document.getElementById('two-items-temperaturePart2');
-  var propPart2 = arrayPropPart2.querySelectorAll('.temp');
-  var heightPart2 = arrayPropPart2.querySelectorAll('.heightTemp');
-
-  for (var i = 0; i < 4; i++) {
-    prop[i].textContent = Math.round(renderData.temp[i].main.temp);
-    height[i].style.height = Math.round(renderData.temp[i].main.temp) + "px";
-  }
-  for (var i = 0; i < 4; i++) {
-    propPart2[i].textContent = Math.round(renderData.temp[i + 4].main.temp);
-    heightPart2[i].style.height = Math.round(renderData.temp[i + 4].main.temp) + "px";
-  }
-
-  var temperature8days = document.getElementById('dayWeather8days');
-  var dayWeather = temperature8days.querySelectorAll('.tempDay');
-
-  for (var i = 0; i < 8; i++) {
-    dayWeather[i].textContent = Math.round(renderData.temp[i * 4].main.temp) + 'C';
-  }
-}
-
-function renderFiveDays2(renderData) {
-  var pollution = document.getElementById('pollution');
-  pollution.textContent = renderData.data;
-}
-
-function renderFiveDays3(renderData) {
-  var currentTemperature = document.getElementById('text-style-big-temperature');
-  var currentHumidity = document.getElementById('humidity');
-  var wind = document.getElementById('wind');
-
-  currentHumidity.textContent = renderData.humidity + `%`;
-  currentTemperature.textContent = Math.round(renderData.temp) + `С`;
-  wind.textContent = renderData.wind;
-}
-
-function renderCity(renderData) {
-  var currentCityMain = document.getElementById('currentCityMain');
-  currentCityMain.textContent = renderData;
-}
-
-var FIVE_DAY_URL = `http://api.openweathermap.org/data/2.5/forecast?q=Izhevsk&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
-var pollution = `http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=e2c078e26648e8e09b6e90e982007c80`;
-
-function Fetcher() {
-  this.fetchData = function (url, success, failure) {
-    fetch(url)
-      .then(function (response) {
-        return Promise.all([response.status, response.json()])
-      })
-      .then(function (result) {
-        console.log(result[0])
-        if (result[0] != 200) {
-
-          failure(result);
-        } else {
-          success(result[1]);
+        for (let i = 0; i < countSelectedElement; i++) {
+            document.querySelectorAll('.temp1')[i].textContent = Math.round(renderData.temp[i].main.temp);
+            document.querySelectorAll('.heightTemp1')[i].style.height = Math.round(renderData.temp[i].main.temp) + "px";
+            document.querySelectorAll('.temp2')[i].textContent = Math.round(renderData.temp[i + 4].main.temp);
+            document.querySelectorAll('.heightTemp2')[i].style.height = Math.round(renderData.temp[i + 4].main.temp) + "px";
+            document.querySelectorAll('.windSpeed1')[i].textContent = Math.round(renderData.temp[i].wind.speed);
+            document.querySelectorAll('.windSpeed2')[i].textContent = Math.round(renderData.temp[i + 4].wind.speed);
+            document.querySelectorAll('.precipationValue1')[i].textContent = Math.round(renderData.temp[i].main.humidity - 16);
+            document.querySelectorAll('.precipationValue2')[i].textContent = Math.round(renderData.temp[i + 12].main.humidity - 16);
         }
-      }).catch(function (error) {
-        failure(error)
-        alert('Ошибка')
-      })
-  }
-}
 
-function FiveDayFetcher() {
-  Fetcher.apply(this, arguments)
-  var parentFetcher = this.fetchData;
-  this.fetchData = function (url, success, failure) {
-    parentFetcher.apply(this, [url, success, failure]);
-  }
-}
+        for (let i = 0; i < countSelectedElement2; i++) {
+            document.querySelectorAll('.probabilityValue1')[i].style.height = Math.round(renderData.temp[i].main.humidity / 4) + "px";
+            document.querySelectorAll('.probabilityValue2')[i].style.height = Math.round(renderData.temp[i + 12].main.humidity / 4) + "px";
+        }
 
-class Transformer {
-  cpnstructor() {
-    this.transform = function () {}
-  }
-}
+        const SHORT_NAMES_WEEK = getShortNamesDays();
+        let nowDate = new Date();
+        let start = nowDate.getDay();
 
-class FiveDayTransformer extends Transformer {
-  transform(response) {
-    return {
-      temp: response.list
-    };
-  }
-}
+        for (let i = 0; i < countSelectedElement3; i++) {
+            document.querySelectorAll('.tempDay')[i].textContent = Math.round(renderData.temp[i * 4].main.temp) + 'C';
+            document.querySelectorAll('.text-style-dayofweek')[i].textContent = SHORT_NAMES_WEEK[i + start];
 
-class FiveDayTransformer2 extends Transformer {
-  transform(response) {
-    return {
-      data: response.data[36].value
-    };
-  }
-}
+            let iconChange = renderData.temp[i * 4].weather[0].description;
+            document.querySelectorAll('.iconWeather')[i].setAttribute('src', `images/${iconChange}.png`)
+            let deg = renderData.temp[i].wind.deg;
+            document.querySelectorAll('.wind-arrow')[i].setAttribute('style', `transform: rotate(${deg}deg)`);
+        }
+    }
 
-class FiveDayTransformer3 extends Transformer {
-  transform(response) {
-    return {
-      temp: response.main.temp,
-      humidity: response.main.humidity,
-      wind: response.wind.speed
-    };
-  }
-}
+    renderCurrentDay(renderData) {
+        document.getElementById('humidity').textContent = renderData.humidity + `%`;
+        document.getElementById('precipitation').textContent = renderData.humidity - 16 + `%`
+        document.getElementById('text-style-big-temperature').textContent = Math.round(renderData.temp) + `С`;
+        document.getElementById('wind').textContent = renderData.wind;
 
-function Renderer() {
-  this.renderHeader = function () {}
-  this.renderFooter = function () {}
-  this.renderBody = function () {}
-}
+        let iconWeather = renderData.icon;
+        document.getElementById('pictureCurrentWeather').setAttribute('src', `images/${iconWeather}.png`);
+    }
 
-function FiveDayRenderer() {
-  Renderer.apply(this, arguments)
-  this.renderBody = renderFiveDays
-}
+    renderCity(renderData) {
+        document.getElementById('currentCityMain').textContent = renderData;
+    }
 
-function FiveDayRenderer2() {
-  Renderer.apply(this, arguments)
-  this.renderBody = renderFiveDays2
-}
+    renderHeaderPollution(renderData) {
+        document.getElementById('pollution').textContent = Math.round(renderData.data * 10000000) / 10000000;
+    }
 
-function FiveDayRenderer3() {
-  Renderer.apply(this, arguments)
-  this.renderBody = renderFiveDays3
-}
-///// Default
-var fiveDayTransformer = new FiveDayTransformer()
-var fetcher = new FiveDayFetcher()
-fetcher.fetchData(FIVE_DAY_URL, function (response) {
-  var transformFive = fiveDayTransformer.transform(response)
-  var renderer = new FiveDayRenderer()
-  renderer.renderBody(transformFive)
+    getData(url) {
+        //console.log(url)
+        return fetch(url).then(result => {
+            console.log(result) 
+            result.json();
+        });
+    }
 
-}, function () {
-  alert('fail')
-})
+    pollutionFormatter(obj) {
+        // console.log(obj)
+        return {
+            data: obj.data[36].value
+        };
+    }
 
+    FiveDayFormatter(obj) {
+        return {
+            temp: obj.list
+        };
+    }
 
-var pollution = `http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=e2c078e26648e8e09b6e90e982007c80`;
-var fiveDayTransformer2 = new FiveDayTransformer2()
-var fetcher2 = new FiveDayFetcher()
-fetcher2.fetchData(pollution, function (response) {
-  var result = fiveDayTransformer2.transform(response)
-  var renderer2 = new FiveDayRenderer2()
-  renderer2.renderBody(result)
+    CurrentDayFormatter(obj) {
+        return {
+            temp: obj.main.temp,
+            humidity: obj.main.humidity,
+            wind: obj.wind.speed,
+            icon: obj.weather[0].description
+        };
+    }
 
-}, function () {
-  alert('fail')
-})
+    getFiveDaysWeather() {
+        this.getData(this.options.FIVE_DAY_URL).then(res => {
+            let transformFive = this.FiveDayFormatter(res);
+            this.renderFiveDays(transformFive);
+        });
+    }
 
-var fiveDaysInfo2 = `http://api.openweathermap.org/data/2.5/weather?q=Izhevsk&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
-var fiveDayTransformer3 = new FiveDayTransformer3()
-var fetcher3 = new FiveDayFetcher()
-fetcher3.fetchData(fiveDaysInfo2, function (response) {
-  var result = fiveDayTransformer3.transform(response)
-  var renderer3 = new FiveDayRenderer3()
-  renderer3.renderBody(result)
+    getPoluutionWeather() {
+        this.getData(this.options.POLLUTION).then(res => {
+            console.log (res)
+            let result = this.pollutionFormatter(res);
+            this.renderHeaderPollution(result);
+        })
+    }
 
-}, function () {
-  alert('fail')
-})
+    getCurrentWeather() {
+        this.getData(this.options.FIVE_DAYS_INFO2).then(res => {
+            let result = this.CurrentDayFormatter(res);
+            this.renderCurrentDay(result);
+        })
+    }
 
-///////EndDefault
+    init() {
+        document.getElementById('header-findform').addEventListener('submit', event => {
+            event.preventDefault();
+        });
+    }
 
-var findCityInput = document.getElementById('findCityInput');
-findCityInput.addEventListener("change", changeCity);
-
-function changeCity() {
-
-  var serchRequest = findCityInput.value;
-  var fiveDaysInfo = `http://api.openweathermap.org/data/2.5/forecast?q=${serchRequest}&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
-  var fiveDayTransformer = new FiveDayTransformer()
-  var fetcher = new FiveDayFetcher()
-  fetcher.fetchData(fiveDaysInfo, function (response) {
-    var result = fiveDayTransformer.transform(response)
-    var renderer = new FiveDayRenderer()
-    renderer.renderBody(result)
+};
 
 
-    renderCity(serchRequest);
-  }, function () {
-    alert('fail')
-  })
-
-  var pollution = `http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=e2c078e26648e8e09b6e90e982007c80`;
-  var fiveDayTransformer2 = new FiveDayTransformer2()
-  var fetcher2 = new FiveDayFetcher()
-  fetcher2.fetchData(pollution, function (response) {
-    var result = fiveDayTransformer2.transform(response)
-    var renderer2 = new FiveDayRenderer2()
-    renderer2.renderBody(result)
-
-  }, function () {
-    alert('fail')
-  })
-
-  var fiveDaysInfo2 = `http://api.openweathermap.org/data/2.5/weather?q=${serchRequest}&units=metric&APPID=e2c078e26648e8e09b6e90e982007c80`;
-  var fiveDayTransformer3 = new FiveDayTransformer3()
-  var fetcher3 = new FiveDayFetcher()
-  fetcher3.fetchData(fiveDaysInfo2, function (response) {
-    var result = fiveDayTransformer3.transform(response)
-    var renderer3 = new FiveDayRenderer3()
-    renderer3.renderBody(result)
-
-  }, function () {
-    alert('fail')
-  })
-}
-
-document.getElementById('header-findform').addEventListener('submit', function (event) {
-  event.preventDefault();
-});
+const presenter = new Presenter();
+presenter.init();
+presenter.getPoluutionWeather();
+// presenter.getCurrentWeather();
+// presenter.getFiveDaysWeather();

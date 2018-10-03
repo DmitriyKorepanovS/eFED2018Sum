@@ -94,7 +94,8 @@ body {
 	padding-right: 5px;
 }
 
-#content, .content {
+#content,
+.content {
 	min-height: 500px;
 }
 
@@ -151,14 +152,9 @@ body {
 	flex-direction: column-reverse;
 }
 
-.low-probability {
+.probabilityValue1,
+.probabilityValue2 {
 	height: 15px;
-	border-top: 2px solid #1878f0;
-	background-color: #e7f1fd;
-}
-
-.high-probability {
-	height: 30px;
 	border-top: 2px solid #1878f0;
 	background-color: #e7f1fd;
 }
@@ -168,7 +164,8 @@ body {
 	justify-content: space-around;
 }
 
-.wind-arrow40 {
+.wind-arrow40,
+.wind-arrow {
 	transform: rotate(40deg);
 }
 
@@ -209,7 +206,7 @@ body {
 	padding-right: 15px;
 }
 
-.text-style-grey {
+.text-style-dayofweek {
 	color: #1878f0;
 }
 
@@ -220,12 +217,11 @@ body {
 }
 
 .day-weather-temperature__nextday--active {
-	background: #fcfcfc;
-	border: 1px solid #e9e9e9;
+	border: 1px solid white;
 }
 
 .textspace {
-	margin-left: 160px;
+	margin-left: 360px;
 }
 
 /* Page - 5days.html */
@@ -234,7 +230,7 @@ body {
 	margin-left: 50px;
 }
 
-.header-image-cloudy {
+#header-image-cloudy {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -319,7 +315,7 @@ body {
 	display: inline-block;
 	width: 26px;
 	height: 15px;
-	background-color: #b8ea86;
+	background-color: #81D4FA;
 	border: 1px solid;
 	margin-right: 2px;
 	font-size: 10px;
@@ -333,7 +329,8 @@ body {
 	line-height: 25px;
 }
 
-.wind-speed-5days, #wind-speed-5days {
+.wind-speed-5days,
+#wind-speed-5days {
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
@@ -365,7 +362,7 @@ body {
 	line-height: 25px;
 }
 
-.weathertable-rainfall-5days {
+#weathertable-rainfall-5days {
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 14px;
@@ -478,11 +475,16 @@ body {
 	flex-direction: column-reverse;
 }
 
-.two-items {
+#precipation_part1,
+#precipation_part2 {
 	display: flex;
 }
 
-#two-items-temperature, .two-items-temperature, #two-items-temperaturePart2 {
+#two-items-temperature,
+.two-items-temperature,
+#two-items-temperaturePart2,
+#two-items-wind,
+#two-items-wind-part2 {
 	display: flex;
 	justify-content: space-around;
 }
@@ -490,18 +492,20 @@ body {
 .high-temperature {
 	height: 30px;
 	background-color: #81D4FA;
-	width:16px;
+	width: 16px;
 }
-.heightTemp{
-	
+
+.heightTemp1,
+.heightTemp2 {
+
 	background-color: #81D4FA;
-	width:16px;
+	width: 16px;
 }
 
 .low-temperature {
 	height: 15px;
 	background-color: #81D4FA;
-	width:16px;
+	width: 16px;
 }
 
 .dayblock {
@@ -510,7 +514,9 @@ body {
 	flex-grow: 1;
 }
 
-.day {
+.day,
+.day1,
+.day2 {
 	display: none;
 	border: 1px solid;
 	font-size: 16px;
@@ -531,6 +537,10 @@ body {
 
 .btnNext {
 	display: none;
+}
+
+#currentdate {
+	margin-left: 20px;
 }
 
 /* Page - hystory.html */
@@ -608,10 +618,10 @@ body {
 	}
 
 	.textspace {
-		margin-left: 10px;
+		margin-left: 50px;
 	}
 
-	.header-image-cloudy {
+	#header-image-cloudy {
 		top: 25%;
 	}
 
@@ -632,7 +642,9 @@ body {
 		padding-left: 5px;
 	}
 
-	.day {
+	.day,
+	.day1,
+	.day2 {
 		display: block;
 	}
 

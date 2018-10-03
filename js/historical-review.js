@@ -1,55 +1,47 @@
-var averageMax = document.getElementById('averageMax');
-var cellAverageMax = averageMax.querySelectorAll('.cell');
+let obj = {
+    cellAverageMax: document.querySelectorAll('#averageMax >.cell'),
+    cellAverageMin: document.querySelectorAll('#averageMin > .cell'),
+    cellrecordMax: document.querySelectorAll('#recordMax > .cell'),
+    cellrecordMin: document.querySelectorAll('#recordMin > .cell')
+}
 
-var averageMin = document.getElementById('averageMin');
-var cellAverageMin = averageMin.querySelectorAll('.cell');
+const YEAR = '2016';
+let CityName = 'Izhevsk';
 
-var recordMax = document.getElementById('recordMax');
-var cellrecordMax = recordMax.querySelectorAll('.cell');
-
-var recordMin = document.getElementById('recordMin');
-var cellrecordMin = recordMin.querySelectorAll('.cell');
-
-var year = '2016';
-var cityHistorical = 'Izhevsk';
-
-function getAverage(array, proprerty, cityHistorical) {
-    var selectedByCity = historicalReviewMock[cityHistorical][year]
-    for (var i = 0; i < selectedByCity.length; i++) {
+function getAverage(array, proprerty, CityName) {
+    let selectedByCity = historicalReviewMock[CityName][YEAR]
+    for (let i = 0; i < selectedByCity.length; i++) {
         array[i + 1].textContent = selectedByCity[i][proprerty];
     }
 }
 
-getAverage(cellAverageMax, 'max', cityHistorical);
-getAverage(cellAverageMin, 'min', cityHistorical);
-getRecord(cellrecordMax, 'RecordMax', cityHistorical);
-getRecord(cellrecordMin, 'RecordMin', cityHistorical);
+getAverage(obj.cellAverageMax, 'max', CityName);
+getAverage(obj.cellAverageMin, 'min', CityName);
+getRecord(obj.cellrecordMax, 'RecordMax', CityName);
+getRecord(obj.cellrecordMin, 'RecordMin', CityName);
 
-function getRecord(array, proprerty, cityHistorical) {
-    var selectedByCity = historicalReviewMock[cityHistorical][year]
-    for (var i = 0; i < selectedByCity.length; i++) {
+function getRecord(array, proprerty, CityName) {
+    var selectedByCity = historicalReviewMock[CityName][YEAR]
+    for (let i = 0; i < selectedByCity.length; i++) {
         array[i + 1].textContent = selectedByCity[i][proprerty];
     }
 }
 
+const findCityInput = document.getElementById('findCityInput');
+findCityInput.addEventListener("change", changeCity);
 
-var findCityInput = document.getElementById('findCityInput');
-findCityInput.addEventListener("change", changeCity2);
-
-function changeCity2() {
-    var cityHistorical = findCityInput.value;
-    getAverage(cellAverageMax, 'max', cityHistorical);
-    getAverage(cellAverageMin, 'min', cityHistorical);
-    getRecord(cellrecordMax, 'RecordMax', cityHistorical);
-    getRecord(cellrecordMin, 'RecordMin', cityHistorical);
-     
-    changeCityInput(cityHistorical);
+function changeCity() {
+    let CityName = findCityInput.value;
+    getAverage(obj.cellAverageMax, 'max', CityName);
+    getAverage(obj.cellAverageMin, 'min', CityName);
+    getRecord(obj.cellrecordMax, 'RecordMax', CityName);
+    getRecord(obj.cellrecordMin, 'RecordMin', CityName);
+    changeCityInput(CityName);
 }
 
-function changeCityInput(cityHistorical) {
-    var currentCityInput = document.getElementById('currentCityInput');
-    currentCityInput.textContent = cityHistorical;
+function changeCityInput(CityName) {
+    document.getElementById('currentCityInput').textContent = CityName;
 }
-document.getElementById('header-findform').addEventListener('submit', function (event) {
+document.getElementById('header-findform').addEventListener('submit', event => {
     event.preventDefault();
 });

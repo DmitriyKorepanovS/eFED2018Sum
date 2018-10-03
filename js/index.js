@@ -1,5 +1,5 @@
-var btnTemperatureProbabilityWind = document.getElementById('button-temperature-probability-wind');
-var elementButtonrow = document.querySelectorAll('.buttonrow-button-noactive');
+let btnTemperatureProbabilityWind = document.getElementById('button-temperature-probability-wind');
+let elementButtonrow = document.querySelectorAll('.buttonrow-button-noactive');
 
 btnTemperatureProbabilityWind.addEventListener("click", switchButtonStatistic)
 
@@ -11,14 +11,13 @@ function switchButtonStatistic() {
 }
 
 function showButton() {
-  for (var i = 0; i < elementButtonrow.length; i++) {
+  for (let i = 0; i < elementButtonrow.length; i++) {
     if (elementButtonrow[i].classList.contains('buttonrow-button-active')) {
       elementButtonrow[i].classList.remove('buttonrow-button-active');
-
     }
     event.target.classList.add('buttonrow-button-active');
   }
-  for (var i = 0; i < elementButtonrow.length; i++) {
+  for (let i = 0; i < elementButtonrow.length; i++) {
     if (elementButtonrow[i].classList.contains('buttonrow-button-active')) {
       var indexDiv = i;
     }
@@ -26,10 +25,10 @@ function showButton() {
   showSection(indexDiv)
 }
 
-var section = document.querySelectorAll('.probability-of-precipitation');
+let section = document.querySelectorAll('.probability-of-precipitation');
 
 function showSection(indexDiv) {
-  for (var i = 0; i < section.length; i++) {
+  for (let i = 0; i < section.length; i++) {
     if (section[i].classList.contains('activeSection')) {
       section[i].classList.remove('activeSection')
       section[indexDiv].classList.add('activeSection')
