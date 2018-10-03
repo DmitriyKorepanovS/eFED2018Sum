@@ -27,7 +27,7 @@
       </ul>
     </nav>
     <div class="header-info">
-      <img class="header-image-cloudy" src="images/cloudy.png" width="40" alt="img">
+      <img id="header-image-cloudy" src="images/cloudy.png" width="40" alt="img">
       <p class="header-info__city">
         <span id ="currentCityMain">Izhevsk</span></p>
       <form id="header-findform">
@@ -172,11 +172,11 @@
       </div>
       </div>
       <div id="buttonForDay">
-        <div class="buttonDayOfWeek activeDay">Пт</div>
+        <div class="buttonDayOfWeek activeDay">Ср</div>
+        <div class="buttonDayOfWeek">Чт</div>
+        <div class="buttonDayOfWeek">Пт</div>
         <div class="buttonDayOfWeek">Сб</div>
         <div class="buttonDayOfWeek">Вс</div>
-        <div class="buttonDayOfWeek">Пн</div>
-        <div class="buttonDayOfWeek">Вт</div>
       </div>
       <div class="weathertable-max-wind-speed">
         <span>Максимальная скорость ветра, м/с</span>
@@ -184,7 +184,7 @@
       <div id="wind-speed-5days">
 
         <div class="dayblock">
-          <div class="day">Вс, 1 </div>
+          <div class="day1">Вс, 1 </div>
           <div class="wind-speed-5days__one-days">
             <div class="wind-value">2</div>
             <div class="wind-value">5</div>
@@ -193,7 +193,7 @@
           </div>
         </div>
         <div class="dayblock">
-          <div class="day">Пн, 2</div>
+          <div class="day1">Пн, 2</div>
           <div class="wind-speed-5days__one-days">
             <div class="wind-value">2</div>
             <div class="wind-value">5</div>
@@ -203,7 +203,7 @@
         </div>
 
         <div class="dayblock">
-          <div class="day">Вт, 3 </div>
+          <div class="day1">Вт, 3 </div>
           <div class="wind-speed-5days__one-days">
             <div class="wind-value">2</div>
             <div class="wind-value">5</div>
@@ -212,7 +212,7 @@
           </div>
         </div>
         <div class="dayblock">
-          <div class="day">Чт, 4 </div>
+          <div class="day1">Чт, 4 </div>
           <div class="wind-speed-5days__one-days">
             <div class="wind-value">2</div>
             <div class="wind-value">5</div>
@@ -221,7 +221,7 @@
           </div>
         </div>
         <div class="dayblock">
-          <div class="day">Пт, 5</div>
+          <div class="day1">Пт, 5</div>
           <div class="wind-speed-5days__one-days">
             <div class="wind-value">2</div>
             <div class="wind-value">5</div>
@@ -237,7 +237,7 @@
       <div id="weathertable-rainfall-5days">
 
         <div class="dayblock">
-          <div class="day">Вс, 1</div>
+          <div class="day2">Вс, 1</div>
           <div class="weathertable-rainfall__one-days">
             <div class="precipitation-level">
               <img class="style-image" src="images/Group.png" width="22" height="22" alt="level"><span class="valueRain">02</span>
@@ -254,7 +254,7 @@
           </div>
         </div>
         <div class="dayblock">
-          <div class="day">Пн, 2</div>
+          <div class="day2">Пн, 2</div>
           <div class="weathertable-rainfall__one-days">
             <div class="precipitation-level">
               <img class="style-image" src="images/Group.png" width="22" height="22" alt="level"><span class="valueRain">02</span>
@@ -271,7 +271,7 @@
           </div>
         </div>
         <div class="dayblock">
-          <div class="day">Вт, 3 </div>
+          <div class="day2">Вт, 3 </div>
           <div class="weathertable-rainfall__one-days">
             <div class="precipitation-level">
               <img class="style-image" src="images/Group.png" width="22" height="22" alt="level"><span class="valueRain">02</span>
@@ -288,7 +288,7 @@
           </div>
         </div>
         <div class="dayblock">
-          <div class="day">Ср, 4 </div>
+          <div class="day2">Ср, 4 </div>
           <div class="weathertable-rainfall__one-days">
             <div class="precipitation-level">
               <img class="style-image" src="images/Group.png" width="22" height="22" alt="level"><span class="valueRain">02</span>
@@ -305,7 +305,7 @@
           </div>
         </div>
         <div class="dayblock">
-          <div class="day">Чт, 5 </div>
+          <div class="day2">Чт, 5 </div>
           <div class="weathertable-rainfall__one-days">
             <div class="precipitation-level">
               <img class="style-image" src="images/Group.png" width="22" height="22" alt="level"><span class="valueRain">02</span>
@@ -335,28 +335,28 @@
         <div class="Sun-image">
           <img src="images/sun.png" width="100" alt="Moon Picture">
         </div>
-        <div class="day-length-sunrise-and-sunset">Долгота дня - 16ч. 43 мин.
+        <div class="day-length-sunrise-and-sunset">Солнце
           <br />
-          <br />Восход - 4:02
+          <br />Восход - <span id = "sunrise"></span>
           <br />
-          <br />Заход - 20:45
+          <br />Закат - <span id = "sunset"></span>
         </div>
         <div class="today-day-length">
-          <span>Сегодня день на 2 минуты длиннее, чем вчера</span>
+          <span></span>
         </div>
       </div>
       <div class="Sun-and-moon__moon-info">
         <div class="moon-image">
           <img src="images/Moon.png" width="100" alt="Moon Picture">
         </div>
-        <div class="sunrise-and-sunset">Луна растущая - 19%
+        <div class="sunrise-and-sunset">Луна
           <br />
-          <br />Восход - 7:40
+          <br />Восход - <span id = "sunriseMoon"></span>
           <br />
-          <br />Заход - 10:58
+          <br />Закат - <span id = "sunsetMoon"></span>
         </div>
         <div class="full-moon">
-          <span>Полнолуние - 28 июня, через 23 дня</span>
+          <span></span>
         </div>
       </div>
     </section>
